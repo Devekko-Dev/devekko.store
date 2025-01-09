@@ -4,7 +4,7 @@ export default {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'cdn.shopify.com',
+        hostname: 'cdn.devekko.dev',
         pathname: '/s/files/**'
       }
     ]

@@ -8,7 +8,7 @@ export type Edge<T> = {
   node: T;
 };
 
-export type Cart = Omit<ShopifyCart, 'lines'> & {
+export type Cart = Omit<DevekkoStoreCart, 'lines'> & {
   lines: CartItem[];
 };
 
@@ -36,7 +36,7 @@ export type CartItem = {
   };
 };
 
-export type Collection = ShopifyCollection & {
+export type Collection = DevekkoStoreCollection & {
   path: string;
 };
 
@@ -68,7 +68,7 @@ export type Page = {
   updatedAt: string;
 };
 
-export type Product = Omit<ShopifyProduct, 'variants' | 'images'> & {
+export type Product = Omit<DevekkoStoreProduct, 'variants' | 'images'> & {
   variants: ProductVariant[];
   images: Image[];
 };
@@ -95,7 +95,7 @@ export type SEO = {
   description: string;
 };
 
-export type ShopifyCart = {
+export type DevekkoStoreCart = {
   id: string | undefined;
   checkoutUrl: string;
   cost: {
@@ -107,7 +107,7 @@ export type ShopifyCart = {
   totalQuantity: number;
 };
 
-export type ShopifyCollection = {
+export type DevekkoStoreCollection = {
   handle: string;
   title: string;
   description: string;
@@ -115,7 +115,7 @@ export type ShopifyCollection = {
   updatedAt: string;
 };
 
-export type ShopifyProduct = {
+export type DevekkoStoreProduct = {
   id: string;
   handle: string;
   availableForSale: boolean;
@@ -135,23 +135,23 @@ export type ShopifyProduct = {
   updatedAt: string;
 };
 
-export type ShopifyCartOperation = {
+export type DevekkoStoreCartOperation = {
   data: {
-    cart: ShopifyCart;
+    cart: DevekkoStoreCart;
   };
   variables: {
     cartId: string;
   };
 };
 
-export type ShopifyCreateCartOperation = {
-  data: { cartCreate: { cart: ShopifyCart } };
+export type DevekkoStoreCreateCartOperation = {
+  data: { cartCreate: { cart: DevekkoStoreCart } };
 };
 
-export type ShopifyAddToCartOperation = {
+export type DevekkoStoreAddToCartOperation = {
   data: {
     cartLinesAdd: {
-      cart: ShopifyCart;
+      cart: DevekkoStoreCart;
     };
   };
   variables: {
@@ -163,10 +163,10 @@ export type ShopifyAddToCartOperation = {
   };
 };
 
-export type ShopifyRemoveFromCartOperation = {
+export type DevekkoStoreRemoveFromCartOperation = {
   data: {
     cartLinesRemove: {
-      cart: ShopifyCart;
+      cart: DevekkoStoreCart;
     };
   };
   variables: {
@@ -175,10 +175,10 @@ export type ShopifyRemoveFromCartOperation = {
   };
 };
 
-export type ShopifyUpdateCartOperation = {
+export type DevekkoStoreUpdateCartOperation = {
   data: {
     cartLinesUpdate: {
-      cart: ShopifyCart;
+      cart: DevekkoStoreCart;
     };
   };
   variables: {
@@ -191,19 +191,19 @@ export type ShopifyUpdateCartOperation = {
   };
 };
 
-export type ShopifyCollectionOperation = {
+export type DevekkoStoreCollectionOperation = {
   data: {
-    collection: ShopifyCollection;
+    collection: DevekkoStoreCollection;
   };
   variables: {
     handle: string;
   };
 };
 
-export type ShopifyCollectionProductsOperation = {
+export type DevekkoStoreCollectionProductsOperation = {
   data: {
     collection: {
-      products: Connection<ShopifyProduct>;
+      products: Connection<DevekkoStoreProduct>;
     };
   };
   variables: {
@@ -213,13 +213,13 @@ export type ShopifyCollectionProductsOperation = {
   };
 };
 
-export type ShopifyCollectionsOperation = {
+export type DevekkoStoreCollectionsOperation = {
   data: {
-    collections: Connection<ShopifyCollection>;
+    collections: Connection<DevekkoStoreCollection>;
   };
 };
 
-export type ShopifyMenuOperation = {
+export type DevekkoStoreMenuOperation = {
   data: {
     menu?: {
       items: {
@@ -233,36 +233,36 @@ export type ShopifyMenuOperation = {
   };
 };
 
-export type ShopifyPageOperation = {
+export type DevekkoStorePageOperation = {
   data: { pageByHandle: Page };
   variables: { handle: string };
 };
 
-export type ShopifyPagesOperation = {
+export type DevekkoStorePagesOperation = {
   data: {
     pages: Connection<Page>;
   };
 };
 
-export type ShopifyProductOperation = {
-  data: { product: ShopifyProduct };
+export type DevekkoStoreProductOperation = {
+  data: { product: DevekkoStoreProduct };
   variables: {
     handle: string;
   };
 };
 
-export type ShopifyProductRecommendationsOperation = {
+export type DevekkoStoreProductRecommendationsOperation = {
   data: {
-    productRecommendations: ShopifyProduct[];
+    productRecommendations: DevekkoStoreProduct[];
   };
   variables: {
     productId: string;
   };
 };
 
-export type ShopifyProductsOperation = {
+export type DevekkoStoreProductsOperation = {
   data: {
-    products: Connection<ShopifyProduct>;
+    products: Connection<DevekkoStoreProduct>;
   };
   variables: {
     query?: string;

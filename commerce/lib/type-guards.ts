@@ -1,4 +1,4 @@
-export interface ShopifyErrorLike {
+export interface DevekkoStoreErrorLike {
   status: number;
   message: Error;
   cause?: Error;
@@ -8,7 +8,7 @@ export const isObject = (object: unknown): object is Record<string, unknown> => 
   return typeof object === 'object' && object !== null && !Array.isArray(object);
 };
 
-export const isShopifyError = (error: unknown): error is ShopifyErrorLike => {
+export const isDevekkoStoreError = (error: unknown): error is DevekkoStoreErrorLike => {
   if (!isObject(error)) return false;
 
   if (error instanceof Error) return true;
