@@ -10,3 +10,4 @@ mix igniter.new store \
   --example
 
 
+git subtree add --prefix commerce https://github.com/Devekko-Dev/commerce.git main --squash
