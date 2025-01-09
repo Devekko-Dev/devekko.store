@@ -1,16 +1,18 @@
-Devekko Store
+# Devekko Store
 
+## Backend 
 ```store```
-Shopify inspired Devekko Store
-Backend 
-Ash Phoenix
-Pgvector
-Ollama
-GPU enabled
+### Store ###
+* Shopify inspired Devekko Store
+* Ash Phoenix
+* Pgvector
+* Ollama
+* GPU enabled
 
-Frontend
-Commerce
+## Frontend
 ```commerce```
-Forked Next.JS React Commerce app via Vercel
+### Commerce ###
+* Forked Next.JS React Commerce app via Vercel
 
-Docker Compose
+## Infra
+* Docker Compose
