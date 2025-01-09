@@ -14,6 +14,28 @@ services:
           - capabilities: ["utility"]
             count: all
 
+  ollama:
+    volumes:
+      - ./ollama/ollama:/root/.ollama
+    container_name: ollama
+    pull_policy: always
+    tty: true
+    restart: unless-stopped
+    image: ollama/ollama:latest
+    ports:
+      - 7869:11434
+    environment:
+      - OLLAMA_KEEP_ALIVE=24h
+    networks:
+      - data
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
   store_ash_dev:
     build:
       context: ./store
@@ -61,7 +83,6 @@ services:
     ports:
      - 5799:5432
     networks:
-      - internet
       - data
     restart: always
     environment:
