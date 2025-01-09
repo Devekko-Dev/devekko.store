@@ -1,0 +1,80 @@
+networks:
+  internet: {}
+  data: {}
+
+services:
+
+  cuda:
+    image: nvidia/cuda:12.3.1-base-ubuntu20.04
+    command: nvidia-smi
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - capabilities: ["utility"]
+            count: all
+
+  store_ash_dev:
+    build:
+      context: ./store
+      dockerfile: ./gpu.Dockerfile
+    container_name: store
+    develop:
+      watch:
+        - action: sync
+          path: ./store
+          target: /app
+          # ignore:
+          #   - deps/
+        # - action: rebuild
+        #   path: package.json
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - capabilities: ["utility"]
+            count: all
+    # volumes:
+    #   - type: bind
+    #     source: ./folkbot
+    #     target: /app
+      # - docker-composer-elixir-mix:/root/.mix
+      # - hex:/root/.hex
+    networks:
+      - internet
+      - data
+    depends_on:
+      - store_pgvector_dev
+    ports:
+      - "4799:4004"
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - DATABASE_URL=ecto://admin:cohort9theory+Defy@pgvector/folkbot_prod
+      - SECRET_KEY_BASE="HzhOtUKuruFSjI5Gbl1PjfN68Red9VZ6YDZ9wY687hXnw3RwqwROWTv5JBpxLSwj
+#    command: sleep infinity
+    command:
+      - /app/gpu.sh
+
+  store_pgvector_dev:
+    image: pgvector/pgvector:pg17
+    container_name: store_pgvector_dev
+    ports:
+     - 5799:5432
+    networks:
+      - internet
+      - data
+    restart: always
+    environment:
+      - POSTGRES_DB=store_pgvector_dev
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=cohort9theory+Defy
+    volumes:
+      - ./pgvector-init:/docker-entrypoint-initdb.d/
+      - postgres_data:/var/lib/postgresql
+      #- ./folkbot_prod.sql:/docker-entrypoint-initdb.d/folkbot_prod.sql
+    # configs:
+    #   - source: pgvector-init/folkbot_prod.sql
+    #     target: /docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  postgres_data:
