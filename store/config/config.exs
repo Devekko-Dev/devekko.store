@@ -43,7 +43,7 @@ config :spark,
 config :store,
   ecto_repos: [Store.Repo],
   generators: [timestamp_type: :utc_datetime],
-  ash_domains: [Store.Support]
+  ash_domains: [Store.Products, Store.Support]
 
 # Configures the endpoint
 config :store, StoreWeb.Endpoint,
