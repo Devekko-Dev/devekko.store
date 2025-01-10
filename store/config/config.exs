@@ -7,6 +7,10 @@
 # General application configuration
 import Config
 
+config :mime,
+  extensions: %{"json" => "application/vnd.api+json"},
+  types: %{"application/vnd.api+json" => ["json"]}
+
 config :ash,
   allow_forbidden_field_for_relationships_by_default?: true,
   include_embedded_source_by_default?: false,
@@ -20,6 +24,7 @@ config :spark,
     remove_parens?: true,
     "Ash.Resource": [
       section_order: [
+        :json_api,
         :graphql,
         :postgres,
         :resource,
@@ -39,7 +44,15 @@ config :spark,
       ]
     ],
     "Ash.Domain": [
-      section_order: [:graphql, :resources, :policies, :authorization, :domain, :execution]
+      section_order: [
+        :json_api,
+        :graphql,
+        :resources,
+        :policies,
+        :authorization,
+        :domain,
+        :execution
+      ]
     ]
   ]
 
