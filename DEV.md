@@ -14,10 +14,4 @@ git subtree add --prefix commerce https://github.com/Devekko-Dev/commerce.git ma
 
 mix ash.gen.domain Store.Products
 
-mix ash.gen.resource Store.Products.Product \
-  --default-actions read \
-  --uuid-primary-key id \
-  --attribute description:string:required:public, \
-  --relationship belongs_to:representative:Helpdesk.Support.Representative \
-  --timestamps \
-  --extend postgres,graphql
+
