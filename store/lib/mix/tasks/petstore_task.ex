@@ -7,7 +7,8 @@ defmodule Mix.Tasks.Petstore do
     # calling our Hello.say() function from earlier
     # Petstore.say()
     # Petstore.json()
-    Petstore.debug()
-#    Petstore.generate()
+    # Petstore.debug()
+    Petstore.code()
+    #    Petstore.generate()
   end
 end

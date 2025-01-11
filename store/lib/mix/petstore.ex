@@ -18,9 +18,22 @@ defmodule Petstore do
     tesla: TestingTesla,
     endpoint: "https://petstore3.swagger.io/api/v3",
     resources: [
-      Petstore: [
+      PetstoreOrder:
+      [
         path: "/store/order/{orderId}",
         object_type: "components.schemas.Order",
+        primary_key: "id",
+        # entity_path: "",
+        fields: [
+          orderId: [
+            filter_handler: {:place_in_csv_list, ["id"]}
+          ]
+        ]
+      ],
+      PetstoreUser:
+      [
+        path: "/store/user/{userId}",
+        object_type: "components.schemas.User",
         primary_key: "id",
         # entity_path: "",
         fields: [
@@ -31,6 +44,26 @@ defmodule Petstore do
       ]
     ]
   ]
+
+
+  # @config [
+  #   tesla: TestingTesla,
+  #   endpoint: "https://petstore3.swagger.io/api/v3",
+  #   resources: [
+  #     PetstoreUser:
+  #     [
+  #       path: "/store/user/{userId}",
+  #       object_type: "components.schemas.User",
+  #       primary_key: "id",
+  #       # entity_path: "",
+  #       fields: [
+  #         orderId: [
+  #           filter_handler: {:place_in_csv_list, ["id"]}
+  #         ]
+  #       ]
+  #     ]
+  #   ]
+  # ]
 
   @json "test/ecommerceapi/pet_store.json" |> File.read!() |> Jason.decode!()
 
@@ -53,17 +86,21 @@ defmodule Petstore do
       IO.inspect(resource)
       IO.inspect(code)
       Code.eval_string(code)
-      resource
-      File.write!("resource.ex", "Eats, Shoots & Leaves")
+      # resource
+      File.write!("priv/generated/petstore.ex", code)
     end)
   end
 
-  def generate do
+  def code do
     @json
     |> AshJsonApiWrapper.OpenApi.ResourceGenerator.generate(Domain, @config)
     |> Enum.map(fn {resource, code} ->
       Code.eval_string(code)
       resource
+      IO.inspect(resource)
+      IO.inspect(code)
+      File.write!("priv/generated/#{resource}.ex", code)
+
     end)
   end
 
