@@ -48,7 +48,6 @@ defmodule StoreWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    ash_admin "/admin"
   end
 
   scope "/" do
