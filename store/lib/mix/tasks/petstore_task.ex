@@ -8,7 +8,7 @@ defmodule Mix.Tasks.Petstore do
     # Petstore.say()
     # Petstore.json()
     # Petstore.debug()
-    Petstore.code()
+    Petstore.debug()
     #    Petstore.generate()
   end
 end
