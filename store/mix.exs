@@ -37,7 +37,7 @@ defmodule Store.MixProject do
       {:ash_csv, "~> 0.9.7"},
       {:ash_json_api, "~> 1.0"},
       {:ash_graphql, "~> 1.0"},
-      {:ash_money, "~> 0.1.15"},
+      {:ash_money, "~> 0.1"},
       {:ash_phoenix, "~> 2.0"},
       {:ash_postgres, "~> 2.0"},
       {:ash_state_machine, "~> 0.2.7"},
@@ -46,8 +46,8 @@ defmodule Store.MixProject do
       {:bandit, "~> 1.5"},
       {:dns_cluster, "~> 0.1.1"},
       {:ecto_sql, "~> 3.10"},
-      {:ex_money_sql, "~> 1.11"},
-      {:esbuild, "~> 0.8", runtime: Mix.env() == [:dev, :gpu]},
+      {:ex_money_sql, "~> 1.0"},
+      {:esbuild, "~> 0.8.2", runtime: Mix.env() == [:dev, :gpu]},
       {:finch, "~> 0.13"},
       {:floki, ">= 0.30.0", only: :test},
       {:gettext, "~> 0.26"},
@@ -70,7 +70,7 @@ defmodule Store.MixProject do
       {:postgrex, ">= 0.0.0"},
       {:swoosh, "~> 1.5"},
       {:smokestack, "~> 0.9.1"},
-      {:tailwind, "~> 0.2", runtime: Mix.env() == [:dev, :gpu]},
+      {:tailwind, "~> 0.2.4", runtime: Mix.env() == [:dev, :gpu]},
       {:telemetry_metrics, "~> 1.0"},
       {:telemetry_poller, "~> 1.0"}
     ]

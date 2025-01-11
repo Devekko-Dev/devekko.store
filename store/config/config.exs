@@ -17,7 +17,8 @@ config :ash,
   show_keysets_for_all_actions?: false,
   default_page_type: :keyset,
   policies: [no_filter_static_forbidden_reads?: false],
-  custom_types: [ticket_status: Store.Support.Ticket.Types.Status]
+  custom_types: [ticket_status: Store.Support.Ticket.Types.Status, money: AshMoney.Types.Money],
+  known_types: [AshMoney.Types.Money]
 
 config :spark,
   formatter: [
@@ -110,6 +111,10 @@ config :logger, :console,
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
+
+config :ex_cldr, json_library: Jason, default_backend: Store.Cldr
+
+config :ex_cldr, default_backend: Store.Cldr
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
