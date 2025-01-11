@@ -33,15 +33,21 @@ defmodule Store.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:ash_admin, "~> 0.12.5"},
+      {:ash_csv, "~> 0.9.7"},
       {:ash_json_api, "~> 1.0"},
       {:ash_graphql, "~> 1.0"},
+      {:ash_money, "~> 0.1.15"},
       {:ash_phoenix, "~> 2.0"},
       {:ash_postgres, "~> 2.0"},
+      {:ash_state_machine, "~> 0.2.7"},
       {:ash, "~> 3.0"},
-      {:bandit, "~> 1.5"}
-      {:esbuild, "~> 0.8", runtime: Mix.env() == [:dev, :gpu]},
-      {:ecto_sql, "~> 3.10"},
+      {:ash_slug, "~> 0.1.1"},
+      {:bandit, "~> 1.5"},
       {:dns_cluster, "~> 0.1.1"},
+      {:ecto_sql, "~> 3.10"},
+      {:ex_money_sql, "~> 1.11"},
+      {:esbuild, "~> 0.8", runtime: Mix.env() == [:dev, :gpu]},
       {:finch, "~> 0.13"},
       {:floki, ">= 0.30.0", only: :test},
       {:gettext, "~> 0.26"},
@@ -63,9 +69,10 @@ defmodule Store.MixProject do
       {:phoenix_live_dashboard, "~> 0.8.3"},
       {:postgrex, ">= 0.0.0"},
       {:swoosh, "~> 1.5"},
+      {:smokestack, "~> 0.9.1"},
       {:tailwind, "~> 0.2", runtime: Mix.env() == [:dev, :gpu]},
       {:telemetry_metrics, "~> 1.0"},
-      {:telemetry_poller, "~> 1.0"},
+      {:telemetry_poller, "~> 1.0"}
     ]
   end
 
