@@ -36,6 +36,7 @@ defmodule Store.MixProject do
       {:ash_admin, "~> 0.12.5"},
       {:ash_csv, "~> 0.9.7"},
       {:ash_json_api, "~> 1.0"},
+      {:ash_json_api_wrapper, github: "ash-project/ash_json_api_wrapper", only: [:dev, :gpu], override: true},
       {:ash_graphql, "~> 1.0"},
       {:ash_money, "~> 0.1"},
       {:ash_phoenix, "~> 2.0"},

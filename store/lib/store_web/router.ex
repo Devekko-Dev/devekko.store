@@ -1,5 +1,6 @@
 defmodule StoreWeb.Router do
   use StoreWeb, :router
+  import AshAdmin.Router
 
   pipeline :graphql do
     plug AshGraphql.Plug
@@ -11,7 +12,8 @@ defmodule StoreWeb.Router do
     plug :fetch_live_flash
     plug :put_root_layout, html: {StoreWeb.Layouts, :root}
     plug :protect_from_forgery
-    plug :put_secure_browser_headers
+    # plug :put_secure_browser_headers
+    plug :put_secure_browser_headers, %{"content-security-policy" => "default-src 'nonce-ash_admin-Ed55GFnX' 'self'"}
   end
 
   pipeline :api do
@@ -46,6 +48,13 @@ defmodule StoreWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    ash_admin "/admin"
+  end
+
+  scope "/" do
+    pipe_through :browser
+
+    ash_admin "/admin"
   end
 
   # Other scopes may use custom stacks.
