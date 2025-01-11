@@ -3182,3 +3182,7 @@
 [25531.676971, "o", "\b\b\b\b\b\b\b\b\u001b[J\r\niex(1)> "]
 [25531.677215, "o", "\b\b\b\b\b\b\b\b\u001b[JRebuilding...\r\niex(1)> "]
 [25532.181331, "o", "\b\b\b\b\b\b\b\b\u001b[J\r\nDone in 593ms.\r\niex(1)> "]
+[39318.650342, "o", "\r\r\n\u001b[JBREAK: (a)bort (A)bort with dump (c)ontinue (p)roc info (i)nfo\r\r\n       (l)oaded (v)ersi"]
+[39318.650497, "o", "on (k)ill (D)b-tables (d)istribution\r\r\n"]
+[39318.830839, "o", "^C"]
+[39318.902542, "o", "\u001b[?2004h\u001b[34;1m06:02:52 \u001b[0;97m\u001b[90;1mniccolox@devekko \u001b[36;1mstore ±\u001b[0;32m|master \u001b[0;31m✗\u001b[0;32m|\u001b[32;1m→ \u001b[0m"]

@@ -58,7 +58,7 @@ defmodule Store.MixProject do
        app: false,
        compile: false,
        depth: 1},
-      {:igniter, "~> 0.5", only: [:dev, :gpu, :test]},
+      {:igniter, "~> 0.5.8", only: [:dev, :gpu, :test]},
       {:jason, "~> 1.2"},
       {:open_api_spex, "~> 3.0"},
       {:phoenix, "~> 1.7.18"},
