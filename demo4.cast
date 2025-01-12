@@ -1934,3 +1934,6 @@
 [24729.862002, "o", "** (SyntaxError) invalid syntax found on iex:2:1:\r\n    \u001b[31merror:\u001b[0m unexpected token: }\r\n    │\r\n  2 │ } |> ExJsonSchema.Schema.resolve()\r\n    │ \u001b[31m^\u001b[0m\r\n    │\r\n    └─ iex:2:1\r\n\u001b[31m    (iex 1.18.0) lib/iex/evaluator.ex:299: IEx.Evaluator.parse_eval_inspect/4\r\n    (iex 1.18.0) lib/iex/evaluator.ex:189: IEx.Evaluator.loop/1\r\n    (iex 1.18.0) lib/iex/evaluator.ex:34: IEx.Evaluator.init/5\r\n    (stdlib 6.1.2) proc_lib.erl:329: :proc_lib.init_p_do_apply/3\r\n\u001b[0m"]
 [24729.862143, "o", "iex(2)> "]
 [28567.419861, "r", "122x14"]
+[28720.623414, "r", "122x16"]
+[28720.812737, "r", "122x22"]
+[28720.987218, "r", "122x27"]
