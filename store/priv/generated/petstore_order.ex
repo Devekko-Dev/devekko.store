@@ -1,11 +1,11 @@
 defmodule PetstoreOrder do
-  use Ash.Resource, domain: Petstore.Domain, data_layer: AshJsonApiWrapper.DataLayer
+  use Ash.Resource, domain: API.Gen.Ecommerce.Domain, data_layer: AshJsonApiWrapper.DataLayer
 
   json_api_wrapper do
     tesla(Elixir.TestingTesla)
 
     endpoints do
-      base("https://petstore3.swagger.io/api/v3")
+      base("https://developers.apideck.com")
 
       endpoint :get_order_by_id do
         path("/store/order/{orderId}")

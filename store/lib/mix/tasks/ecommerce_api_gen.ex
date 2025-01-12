@@ -4,7 +4,9 @@ defmodule Mix.Tasks.EcommerceGen do
 
   @shortdoc "Gen Ecommerce API Resource."
   def run(_) do
-    # API.Gen.Ecommerce.json()
-    API.Gen.Ecommerce.debug()
-  end
+    #API.Gen.Ecommerce.debugjson()
+#     API.Gen.Ecommerce.code()
+#     API.Gen.Ecommerce.debugcode()
+     API.Gen.Ecommerce.code()
+    end
 end
