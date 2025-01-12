@@ -48,6 +48,7 @@ defmodule Store.MixProject do
       {:bandit, "~> 1.5"},
       {:dns_cluster, "~> 0.1.1"},
       {:ecto_sql, "~> 3.10"},
+      {:ex_json_schema, "~> 0.10.2"},
       {:ex_money_sql, "~> 1.0"},
       {:esbuild, "~> 0.8.2", runtime: Mix.env() == [:dev, :gpu]},
       {:finch, "~> 0.13"},
