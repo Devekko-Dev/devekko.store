@@ -1,0 +1,1 @@
+ node ./apicrawl.js ./currencyecommerceapi.json ../store/test/ecommerceapi/newecommerceapi.json

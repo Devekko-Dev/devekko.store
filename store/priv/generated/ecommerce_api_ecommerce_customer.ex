@@ -29,71 +29,17 @@ defmodule EcommerceApiEcommerceCustomer do
       allow_nil?(false)
     end
 
-    attribute(:addresses, :map)
+    attribute(:addresses, :string)
 
     attribute(:company_name, :string)
 
-    attribute(:created_at, :utc_datetime)
+    attribute(:created_at, :string)
 
     attribute :currency, :atom do
-      constraints(
-        one_of: [
-          :UNKNOWN_CURRENCY,
-          :AED,
-          :AFN,
-          :ALL,
-          :AMD,
-          :ANG,
-          :AOA,
-          :ARS,
-          :AUD,
-          :AWG,
-          :AZN,
-          :BAM,
-          :BBD,
-          :BDT,
-          :BGN,
-          :BHD,
-          :BIF,
-          :BMD,
-          :BND,
-          :BOB,
-          :BOV,
-          :BRL,
-          :BSD,
-          :BTN,
-          :BWP,
-          :BYR,
-          :BZD,
-          :CAD,
-          :CDF,
-          :CHE,
-          :CHF,
-          :CHW,
-          :CLF,
-          :CLP,
-          :CNY,
-          :COP,
-          :COU,
-          :CRC,
-          :CUC,
-          :CUP,
-          :CVE,
-          :CZK,
-          :DJF,
-          :DKK,
-          :DOP,
-          :DZD,
-          :EGP,
-          :ERN,
-          :ETB,
-          :EUR,
-          ...
-        ]
-      )
+      constraints(one_of: [:AUD, :CAD, :GBP, :HKD, :USD, :BTC, :ETH])
     end
 
-    attribute(:emails, :map)
+    attribute(:emails, :string)
 
     attribute(:first_name, :string)
 
@@ -103,12 +49,12 @@ defmodule EcommerceApiEcommerceCustomer do
 
     attribute(:orders, :map)
 
-    attribute(:phone_numbers, :map)
+    attribute(:phone_numbers, :string)
 
     attribute :status, :atom do
       constraints(one_of: [:active, :archived])
     end
 
-    attribute(:updated_at, :utc_datetime)
+    attribute(:updated_at, :string)
   end
 end

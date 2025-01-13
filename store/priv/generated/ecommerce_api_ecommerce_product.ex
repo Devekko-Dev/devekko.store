@@ -29,19 +29,19 @@ defmodule EcommerceApiEcommerceProduct do
       allow_nil?(false)
     end
 
-    attribute(:categories, :map)
+    attribute(:categories, :string)
 
-    attribute(:created_at, :utc_datetime)
+    attribute(:created_at, :string)
 
     attribute(:description, :string)
 
-    attribute(:images, :map)
+    attribute(:images, :string)
 
     attribute(:inventory_quantity, :string)
 
     attribute(:name, :string)
 
-    attribute(:options, :map)
+    attribute(:options, :string)
 
     attribute(:price, :string)
 
@@ -51,9 +51,9 @@ defmodule EcommerceApiEcommerceProduct do
       constraints(one_of: [:active, :archived])
     end
 
-    attribute(:tags, :map)
+    attribute(:tags, :string)
 
-    attribute(:updated_at, :utc_datetime)
+    attribute(:updated_at, :string)
 
     attribute(:variants, :map)
 

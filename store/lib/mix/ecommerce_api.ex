@@ -23,19 +23,30 @@ defmodule API.Gen.Ecommerce do
     tesla: TestingTesla,
     endpoint: "https://developers.apideck.com",
     resources: [
-      # pet
-      # PetstoreOrder:
-      # [
-      #   path: "/store/order/{orderId}",
-      #   object_type: "components.schemas.Order",
-      #   primary_key: "id",
-      #   # entity_path: "",
-      #   fields: [
-      #     orderId: [
-      #       filter_handler: {:place_in_csv_list, ["id"]}
-      #     ]
-      #   ]
-      # ]
+      EcommerceApiEcommerceStore:
+      [
+        path: "/ecommerce/stores/{id}",
+        object_type: "components.schemas.EcommerceStore",
+        primary_key: "id",
+        # entity_path: "",
+        fields: [
+          orderId: [
+            filter_handler: {:place_in_csv_list, ["id"]}
+          ]
+        ]
+      ],
+      EcommerceApiEcommerceOrder:
+      [
+        path: "/ecommerce/orders/{id}",
+        object_type: "components.schemas.EcommerceOrder",
+        primary_key: "id",
+        # entity_path: "",
+        fields: [
+          orderId: [
+            filter_handler: {:place_in_csv_list, ["id"]}
+          ]
+        ]
+      ],
       EcommerceApiEcommerceCustomer:
       [
         path: "/ecommerce/customers/{id}",
@@ -87,7 +98,6 @@ defmodule API.Gen.Ecommerce do
       IO.inspect(code)
       # IO.inspect(Code.eval_string(code))
       # Code.eval_string(code)
-      resource
       # resource_down = to_string(resource) |> Macro.underscore()
 
       IO.inspect(resource)
@@ -99,7 +109,7 @@ defmodule API.Gen.Ecommerce do
     @json
     |> AshJsonApiWrapper.OpenApi.ResourceGenerator.generate(Domain, @config)
     |> Enum.map(fn {resource, code} ->
-      # Code.eval_string(code)
+      Code.eval_string(code)
       resource_down = to_string(resource) |> Macro.underscore()
       File.write!("priv/generated/#{resource_down}.ex", code)
     end)
