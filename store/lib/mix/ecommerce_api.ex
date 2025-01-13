@@ -23,6 +23,21 @@ defmodule API.Gen.Ecommerce do
     tesla: TestingTesla,
     endpoint: "https://developers.apideck.com",
     resources: [
+      # schemas
+      # broken
+      EcommerceApiEcommerceDiscount:
+      [
+        path: "/ecommerce/discounts/{id}",
+        object_type: "components.schemas.EcommerceDiscount",
+        primary_key: "",
+        # entity_path: "components.schemas.EcommerceOrderLineItem",
+        fields: [
+          orderId: [
+            filter_handler: {:place_in_csv_list, ["id"]}
+          ]
+        ]
+      ],
+      # broken
       # EcommerceApiEcommerceOrderLineItem:
       # [
       #   # path: "_path",
@@ -35,9 +50,10 @@ defmodule API.Gen.Ecommerce do
       #     ]
       #   ]
       # ],
+      # paths
       EcommerceApiEcommerceStore:
       [
-        path: "/ecommerce/stores/{id}",
+        path: "/ecommerce/store", # this path doesnt exist in json
         object_type: "components.schemas.EcommerceStore",
         primary_key: "id",
         # entity_path: "",
@@ -106,14 +122,14 @@ defmodule API.Gen.Ecommerce do
     |> AshJsonApiWrapper.OpenApi.ResourceGenerator.generate(Domain, @config)
     # |> IO.inspect()
     |> Enum.map(fn {resource, code} ->
-      IO.inspect(resource)
-      IO.inspect(code)
+      # IO.inspect(resource)
+      # IO.inspect(code)
       # IO.inspect(Code.eval_string(code))
       # Code.eval_string(code)
-      # resource_down = to_string(resource) |> Macro.underscore()
+      resource_down = to_string(resource) |> Macro.underscore()
 
-      IO.inspect(resource)
-     File.write!("priv/generated/#{resource}.ex", code)
+      IO.inspect(resource_down)
+     File.write!("priv/generated/debug_#{resource_down}.ex", code)
     end)
   end
 

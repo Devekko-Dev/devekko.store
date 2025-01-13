@@ -6,7 +6,7 @@ defmodule Mix.Tasks.EcommerceGen do
   def run(_) do
     #API.Gen.Ecommerce.debugjson()
 #     API.Gen.Ecommerce.code()
-#     API.Gen.Ecommerce.debugcode()
-     API.Gen.Ecommerce.code()
+     API.Gen.Ecommerce.debugcode()
+#     API.Gen.Ecommerce.code()
     end
 end
