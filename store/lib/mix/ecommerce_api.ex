@@ -23,6 +23,18 @@ defmodule API.Gen.Ecommerce do
     tesla: TestingTesla,
     endpoint: "https://developers.apideck.com",
     resources: [
+      # EcommerceApiEcommerceOrderLineItem:
+      # [
+      #   # path: "_path",
+      #   object_type: "components.schemas.EcommerceOrderLineItem",
+      #   primary_key: "id",
+      #   # entity_path: "components.schemas.EcommerceOrderLineItem",
+      #   fields: [
+      #     orderId: [
+      #       filter_handler: {:place_in_csv_list, ["id"]}
+      #     ]
+      #   ]
+      # ],
       EcommerceApiEcommerceStore:
       [
         path: "/ecommerce/stores/{id}",
