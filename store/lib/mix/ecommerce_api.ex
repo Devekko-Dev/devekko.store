@@ -1,5 +1,5 @@
 defmodule API.Gen.Ecommerce do
-  require IEx
+  # require IEx
   require Ash.Query
   # @moduletag :oapi_petstore
     use Ash.Domain,
@@ -27,10 +27,10 @@ defmodule API.Gen.Ecommerce do
       # broken
       EcommerceApiEcommerceDiscount:
       [
-        path: "/ecommerce/discounts/{id}",
+        path: "__schema__",
         object_type: "components.schemas.EcommerceDiscount",
         primary_key: "",
-        # entity_path: "components.schemas.EcommerceOrderLineItem",
+        # entity_path: "",
         fields: [
           id: [
             filter_handler: {:place_in_csv_list, ["id"]}
@@ -53,7 +53,7 @@ defmodule API.Gen.Ecommerce do
       # paths
       EcommerceApiEcommerceStore:
       [
-        path: "/ecommerce/store", # this path doesnt exist in json
+        path: "/ecommerce/store",
         object_type: "components.schemas.EcommerceStore",
         primary_key: "id",
         # entity_path: "",
