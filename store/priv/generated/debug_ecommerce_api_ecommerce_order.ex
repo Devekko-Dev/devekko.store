@@ -4,6 +4,11 @@ defmodule EcommerceApiEcommerceOrder do
   json_api_wrapper do
     tesla(Elixir.TestingTesla)
 
+    if endpoint(:orders_one) do
+      path("/ecommerce/orders/{id}")
+    end =
+      ""
+
     endpoints do
       base("https://developers.apideck.com")
 
@@ -13,7 +18,7 @@ defmodule EcommerceApiEcommerceOrder do
     end
 
     fields do
-      field :orderId do
+      field :id do
         filter_handler({:place_in_csv_list, ["id"]})
       end
     end

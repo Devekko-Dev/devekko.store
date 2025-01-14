@@ -32,7 +32,7 @@ defmodule API.Gen.Ecommerce do
         primary_key: "",
         # entity_path: "components.schemas.EcommerceOrderLineItem",
         fields: [
-          orderId: [
+          id: [
             filter_handler: {:place_in_csv_list, ["id"]}
           ]
         ]
@@ -58,7 +58,7 @@ defmodule API.Gen.Ecommerce do
         primary_key: "id",
         # entity_path: "",
         fields: [
-          orderId: [
+          id: [
             filter_handler: {:place_in_csv_list, ["id"]}
           ]
         ]
@@ -70,7 +70,7 @@ defmodule API.Gen.Ecommerce do
         primary_key: "id",
         # entity_path: "",
         fields: [
-          orderId: [
+          id: [
             filter_handler: {:place_in_csv_list, ["id"]}
           ]
         ]
@@ -82,7 +82,7 @@ defmodule API.Gen.Ecommerce do
         primary_key: "id",
         # entity_path: "",
         fields: [
-          orderId: [
+          id: [
             filter_handler: {:place_in_csv_list, ["id"]}
           ]
         ]
@@ -94,7 +94,7 @@ defmodule API.Gen.Ecommerce do
         primary_key: "id",
         # entity_path: "",
         fields: [
-          orderId: [
+          id: [
             filter_handler: {:place_in_csv_list, ["id"]}
           ]
         ]

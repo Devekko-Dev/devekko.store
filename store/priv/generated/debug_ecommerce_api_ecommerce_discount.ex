@@ -4,12 +4,14 @@ defmodule EcommerceApiEcommerceDiscount do
   json_api_wrapper do
     tesla(Elixir.TestingTesla)
 
+    if = ""
+
     endpoints do
       base("https://developers.apideck.com")
     end
 
     fields do
-      field :orderId do
+      field :id do
         filter_handler({:place_in_csv_list, ["id"]})
       end
     end
