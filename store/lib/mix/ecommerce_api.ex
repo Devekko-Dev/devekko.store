@@ -108,6 +108,30 @@ defmodule API.Gen.Ecommerce do
           ]
         ]
       ],
+      EcommerceApiTrackingItem:
+      [
+        path: "__schema__",
+        object_type: "components.schemas.TrackingItem",
+        primary_key: "",
+        # entity_path: "",
+        fields: [
+          id: [
+            filter_handler: {:place_in_csv_list, ["id"]}
+          ]
+        ]
+      ],
+      EcommerceApiWebsite:
+      [
+        path: "__schema__",
+        object_type: "components.schemas.Website",
+        primary_key: "",
+        # entity_path: "",
+        fields: [
+          id: [
+            filter_handler: {:place_in_csv_list, ["id"]}
+          ]
+        ]
+      ],
       # broken
       # EcommerceApiEcommerceOrderStatus:
       # [
