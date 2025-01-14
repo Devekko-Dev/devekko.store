@@ -24,7 +24,66 @@ defmodule API.Gen.Ecommerce do
     endpoint: "https://developers.apideck.com",
     resources: [
       # schemas
-      # broken
+      EcommerceApiAddress:
+      [
+        path: "__schema__",
+        object_type: "components.schemas.Address",
+        primary_key: "",
+        # entity_path: "",
+        fields: [
+          id: [
+            filter_handler: {:place_in_csv_list, ["id"]}
+          ]
+        ]
+      ],
+      EcommerceApiDepartment:
+      [
+        path: "__schema__",
+        object_type: "components.schemas.Department",
+        primary_key: "",
+        # entity_path: "",
+        fields: [
+          id: [
+            filter_handler: {:place_in_csv_list, ["id"]}
+          ]
+        ]
+      ],
+      # EcommerceApiDivision:
+      # [
+      #   path: "__schema__",
+      #   object_type: "components.schemas.Division",
+      #   primary_key: "",
+      #   # entity_path: "",
+      #   fields: [
+      #     id: [
+      #       filter_handler: {:place_in_csv_list, ["id"]}
+      #     ]
+      #   ]
+      # ],
+      EcommerceApiEcommerceAddress:
+      [
+        path: "__schema__",
+        object_type: "components.schemas.EcommerceAddress",
+        primary_key: "",
+        # entity_path: "",
+        fields: [
+          id: [
+            filter_handler: {:place_in_csv_list, ["id"]}
+          ]
+        ]
+      ],
+      EcommerceApiEcommerceCustomer:
+      [
+        path: "__schema__",
+        object_type: "components.schemas.EcommerceCustomer",
+        primary_key: "",
+        # entity_path: "",
+        fields: [
+          id: [
+            filter_handler: {:place_in_csv_list, ["id"]}
+          ]
+        ]
+      ],
       EcommerceApiEcommerceDiscount:
       [
         path: "__schema__",
@@ -37,15 +96,52 @@ defmodule API.Gen.Ecommerce do
           ]
         ]
       ],
+      EcommerceApiEcommerceOrderLineItem:
+      [
+        path: "__schema__",
+        object_type: "components.schemas.EcommerceOrderLineItem",
+        primary_key: "",
+        # entity_path: "",
+        fields: [
+          id: [
+            filter_handler: {:place_in_csv_list, ["id"]}
+          ]
+        ]
+      ],
       # broken
-      # EcommerceApiEcommerceOrderLineItem:
+      # EcommerceApiEcommerceOrderStatus:
       # [
-      #   # path: "_path",
-      #   object_type: "components.schemas.EcommerceOrderLineItem",
-      #   primary_key: "id",
-      #   # entity_path: "components.schemas.EcommerceOrderLineItem",
+      #   path: "__schema__",
+      #   object_type: "components.schemas.EcommerceOrderStatus",
+      #   primary_key: "",
+      #   # entity_path: "",
       #   fields: [
-      #     orderId: [
+      #     id: [
+      #       filter_handler: {:place_in_csv_list, ["id"]}
+      #     ]
+      #   ]
+      # ],
+      # broken
+      # EcommerceApiEcommerceOrdersFilter:
+      # [
+      #   path: "__schema__",
+      #   object_type: "components.schemas.EcommerceOrdersFilter",
+      #   primary_key: "",
+      #   # entity_path: "",
+      #   fields: [
+      #     id: [
+      #       filter_handler: {:place_in_csv_list, ["id"]}
+      #     ]
+      #   ]
+      # ],
+      # broken
+      # EcommerceApiPaymentUnit:
+      # [
+      #   path: "__schema__",
+      #   object_type: "components.schemas.PaymentUnit",
+      #   primary_key: "id",
+      #   fields: [
+      #     id: [
       #       filter_handler: {:place_in_csv_list, ["id"]}
       #     ]
       #   ]

@@ -24125,7 +24125,7 @@
 				],
 				"example": "active",
 				"title": "Order Status",
-				"type": "string",
+				"type": "enum",
 				"x-apideck-enum-id": "order.status",
 				"x-graphql-type-name": "EcommerceOrderStatus"
 			},
