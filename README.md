@@ -16,3 +16,11 @@
 
 ## Infra
 * Docker Compose
+
+
+#### Ecommerce API generator with Ash
+
+cd store
+mix ecommerce_gen
+
+

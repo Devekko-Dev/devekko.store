@@ -1,13 +1,25 @@
 defmodule EcommerceApiEcommerceStore do
-  use Ash.Resource, domain: API.Gen.Ecommerce.Domain, data_layer: AshJsonApiWrapper.DataLayer
+  use Ash.Resource,
+    domain: Elixir.API.Gen.Ecommerce.Domain,
+    extensions: [
+      AshAdmin.Resource,
+      AshJsonApi.Resource,
+      AshGraphql.Resource,
+      AshSlug
+    ]
+
+  "AshStateMachine"
+  "AshSlug"
+  "AshJsonApi.Resource"
+  "AshGraphql.Resource"
+  "AshAdmin.Resource"
+
+  resource do
+    require_primary_key?(false)
+  end
 
   json_api_wrapper do
     tesla(Elixir.TestingTesla)
-
-    if endpoint(:stores_one) do
-      path("/ecommerce/store")
-    end =
-      ""
 
     endpoints do
       base("https://developers.apideck.com")

@@ -4,6 +4,21 @@ networks:
 
 services:
 
+  fastapi:
+    build: ./fastapi
+    command: uvicorn app.main:app --reload --workers 1 --host 0.0.0.0 --port 8000
+    volumes:
+      - ./fastapi:/usr/src/app
+    ports:
+      - 8004:8000
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://postgres:postgres@postgres:5432/stack
+    depends_on:
+      - postgres
+    networks:
+      - data
+      - internet
+
   cuda:
     image: nvidia/cuda:12.3.1-base-ubuntu20.04
     command: nvidia-smi
@@ -14,16 +29,16 @@ services:
           - capabilities: ["utility"]
             count: all
 
-  ollama:
+  store_ollama:
     volumes:
       - ./ollama/ollama:/root/.ollama
-    container_name: ollama
+    container_name: store-ollama
     pull_policy: always
     tty: true
     restart: unless-stopped
     image: ollama/ollama:latest
     ports:
-      - 7869:11434
+      - 11434:11434
     environment:
       - OLLAMA_KEEP_ALIVE=24h
     networks:

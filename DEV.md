@@ -21,3 +21,8 @@ mix ash.gen.resource Store.Products.Product \
   --relationship belongs_to:collection:Store.Collections.Collection \
   --timestamps \
   --extend postgres,graphql
+
+
+
+ docker compose up cuda
+ docker compose up store_ollama

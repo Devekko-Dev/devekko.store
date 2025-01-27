@@ -1,0 +1,1000 @@
+ 1018  git status
+ 1019  mix phx.gen.live Jobs Resume resumes     ocd_id:string     slug:string     name:string     title:text     subtitle:text     summary:text     skills:array:string     embedding:text     bio:text     cover:text     email:string     phone:string     url:string     banner:string     photo:string     icon:string     status:string     views:string     likes:strings     follows:strings     address1:string     address2:string     countrycode:string     state:string     county:string     city:string     zip:string     latitude:string     longitude:string     ip:string     end_date:datetime     start_date:datetime     creator_id:references:users     owner_id:references:users     user_id:references:users     resume_user_id:references:users     website_id:references:websites     x:string     youtube:string     linkedin:string     facebook:string     github:string     porfolio:string     website:string     is_featured?:boolean     is_free?:boolean     is_invitable?:boolean     is_listed?:boolean     is_premium?:boolean     is_previewable?:boolean     is_private?:boolean     is_active?:boolean
+ 1020  mix phx.gen.live Jobs Resume resumes     ocd_id:string     slug:string     name:string     title:text     subtitle:text     summary:text     skills:array:string     embedding:text     bio:text     cover:text     email:string     phone:string     url:string     banner:string     photo:string     icon:string     status:string     views:string     likes:string     follows:string     address1:string     address2:string     countrycode:string     state:string     county:string     city:string     zip:string     latitude:string     longitude:string     ip:string     end_date:datetime     start_date:datetime     creator_id:references:users     owner_id:references:users     user_id:references:users     resume_user_id:references:users     website_id:references:websites     x:string     youtube:string     linkedin:string     facebook:string     github:string     porfolio:string     website:string     is_featured?:boolean     is_free?:boolean     is_invitable?:boolean     is_listed?:boolean     is_premium?:boolean     is_previewable?:boolean     is_private?:boolean     is_active?:boolean
+ 1021  mix ecto.migrate
+ 1022  git add .
+ 1023  git commit -am "resume"
+ 1024  git status
+ 1025  mix phx.gen.live Jobs Work works     ocd_id:string     role:string     image1:string     image2:string     image3:string     image4:string     image5:string     url:string     demo_url:string     embedding:string     highlights:array:string     skills:array:string     summary:string     description:string     company_id:references:companies     creator_id:references:users     owner_id:references:users     user_id:references:users     resume_id:references:resumes     resume_user_id:references:users     is_current?:boolean     is_featured?:boolean     is_free?:boolean     is_invitable?:boolean     is_listed?:boolean     is_premium?:boolean     is_previewable?:boolean     is_private?:boolean     is_active?:boolean     is_verified?:boolean     end_date:datetime \
+ 1026  mix phx.gen.live Jobs Experience experiences     ocd_id:string     role:string     image1:string     image2:string     image3:string     image4:string     image5:string     url:string     demo_url:string     embedding:string     highlights:array:string     skills:array:string     summary:string     description:string     company_id:references:companies     creator_id:references:users     owner_id:references:users     user_id:references:users     resume_id:references:resumes     resume_user_id:references:users     is_current?:boolean     is_featured?:boolean     is_free?:boolean     is_invitable?:boolean     is_listed?:boolean     is_premium?:boolean     is_previewable?:boolean     is_private?:boolean     is_active?:boolean     is_verified?:boolean     end_date:datetime     start_date:datetime
+ 1027  mix ecto.migrate
+ 1028  mix ecto.rollback
+ 1029  git status
+ 1030  git add .
+ 1031  git commit -am "exp"
+ 1032  git log
+ 1033  git reset --hard 4c95a78d157f8c945bf7c638dc4a0dd417519c07
+ 1034  mix phx.gen.live Jobs Experience experiences     ocd_id:string     title:string     subtitle:string     headline:string     employment_type:string     summary:string     description:string     image1:string     image2:string     image3:string     image4:string     image5:string     url:string     demo_url:string     embedding:string     highlights:array:string     skills:array:string     address1:string     address2:string     countrycode:string     state:string     county:string     city:string     zip:string     latitude:string     longitude:string     ip:string     location_type:string     company_id:references:companies     creator_id:references:users     owner_id:references:users     user_id:references:users     resume_id:references:resumes     resume_user_id:references:users     is_current?:boolean     is_featured?:boolean     is_free?:boolean     is_invitable?:boolean     is_listed?:boolean     is_premium?:boolean     is_previewable?:boolean     is_private?:boolean     is_active?:boolean     is_verified?:boolean     end_date:datetime     start_date:datetime
+ 1035  mix ecto.migrate
+ 1036  git add .
+ 1037  git commit -am "experiences"
+ 1038  git status
+ 1039  mix phx.gen.live Jobs Publication publications     slug:string     title:string     subtitle:string     publisher:string     summary:string     author:string     type:string     description:string     image1:string     image2:string     image3:string     creator_id:references:users     owner_id:references:users     user_id:references:users     resume_id:references:resumes     resume_user_id:references:users     status:string     embedding:string     highlights:array:string     skills:array:string     publication_date:datetime     url:string     is_verified?:boolean     is_availabe?:boolean     is_featured?:boolean     is_free?:boolean     is_invitable?:boolean     is_listed?:boolean     is_premium?:boolean     is_previewable?:boolean     is_private?:boolean     is_active?:boolean
+ 1040  mix ecto.migrate
+ 1041  git status
+ 1042  git add .
+ 1043  git commit -am "publications
+ 1044  "
+ 1045  mix phx.gen.live Jobs Certificate certificates     slug:string     name:string     organization:string     credential_id:string     credential_url:string     issuer:string     summary:string     type:string     description:string     image1:string     image2:string     image3:string     image4:string     image5:string     creator_id:references:users     owner_id:references:users     user_id:references:users     resume_id:references:resumes     resume_user_id:references:users     status:string     embedding:string     highlights:array:string     skills:array:string     issue_date:datetime     url:string     is_verified?:boolean     is_availabe?:boolean     is_featured?:boolean     is_free?:boolean     is_invitable?:boolean     is_listed?:boolean     is_premium?:boolean     is_previewable?:boolean     is_private?:boolean     is_active?:boolean
+ 1046  mix ecto.migrate
+ 1047  mix phx.gen.live Jobs Award awards     slug:string     title:string     awarder:string     summary:string     type:string     description:string     image1:string     image2:string     image3:string     image4:string     image5:string     creator_id:references:users     owner_id:references:users     user_id:references:users     resume_id:references:resumes     resume_user_id:references:users     status:string     date:datetime     url:string     embedding:string     highlights:array:string     skills:array:string     status:string     is_verified?:boolean     is_availabe?:boolean     is_featured?:boolean     is_free?:boolean     is_invitable?:boolean     is_listed?:boolean     is_premium?:boolean     is_previewable?:boolean     is_private?:boolean     is_active?:boolean
+ 1048  mix ecto.migrate
+ 1049  git status
+ 1050  git add .
+ 1051  git commit -am "awards"
+ 1052  git status
+ 1053  git commit -am "awards"
+ 1054  git status
+ 1055  mix phx.gen.live Jobs Education education     slug:string     institution:string     degree:string     field:string     grade:string     description:string     activities:string     image1:string     image2:string     image3:string     image4:string     image5:string     creator_id:references:users     owner_id:references:users     user_id:references:users     resume_id:references:resumes     resume_user_id:references:users     status:string     embedding:string     highlights:array:string     skills:array:string     end_date:datetime     start_date:datetime     url:string     status:string     is_verified?:boolean     is_availabe?:boolean     is_featured?:boolean     is_free?:boolean     is_invitable?:boolean     is_listed?:boolean     is_premium?:boolean     is_previewable?:boolean     is_private?:boolean     is_active?:boolean
+ 1056  mix ecto.migrate
+ 1057  git status
+ 1058  git add .
+ 1059  git commit -am "education"
+ 1060  mix phx.gen.live Jobs Volunteer volunteering     slug:string     organization:string     role:string     cause:string     summary:string     description:string     image1:string     image2:string     image3:string     image4:string     image5:string     creator_id:references:users     owner_id:references:users     user_id:references:users     resume_id:references:resumes     resume_user_id:references:users     status:string     end_date:datetime     start_date:datetime     url:string     embedding:string     highlights:array:string     skills:array:string     status:string     is_current?:boolean     is_verified?:boolean     is_availabe?:boolean     is_featured?:boolean     is_free?:boolean     is_invitable?:boolean     is_listed?:boolean     is_premium?:boolean     is_previewable?:boolean     is_private?:boolean     is_active?:boolean
+ 1061  mix ecto.migrate
+ 1062  git status
+ 1063  git add .
+ 1064  git commit -am "volunteering"
+ 1065  mix phx.gen.live Jobs Skill skills     slug:string     name:string     level:string     keywords:array:string     embedding:string     highlights:array:string     skills:array:string     description:string     creator_id:references:users     owner_id:references:users     user_id:references:users     resume_id:references:resumes     resume_user_id:references:users     status:string     is_featured?:boolean     is_free?:boolean     is_invitable?:boolean     is_listed?:boolean     is_premium?:boolean     is_previewable?:boolean     is_private?:boolean \
+ 1066  mix phx.gen.live Jobs Skill skills     slug:string     name:string     level:string     keywords:array:string     embedding:string     highlights:array:string     skills:array:string     description:string     creator_id:references:users     owner_id:references:users     user_id:references:users     resume_id:references:resumes     resume_user_id:references:users     status:string     is_featured?:boolean     is_free?:boolean     is_invitable?:boolean     is_listed?:boolean     is_premium?:boolean     is_previewable?:boolean     is_private?:boolean     is_broadcast?:boolean     is_active?:boolean
+ 1067  mix ecto.migrate
+ 1068  git stauts
+ 1069  git status
+ 1070  git add .
+ 1071  git commit -am "skills"
+ 1072  git status
+ 1073  mix phx.gen.live Jobs Language languages     slug:string     language:string     fluency:string     description:string     creator_id:references:users     owner_id:references:users     user_id:references:users     resume_id:references:resumes     resume_user_id:references:users     status:string     is_broadcast?:boolean     is_featured?:boolean     is_free?:boolean     is_invitable?:boolean     is_listed?:boolean     is_premium?:boolean     is_previewable?:boolean     is_private?:boolean     is_active?:boolean
+ 1074  mix ecto.migrate
+ 1075  git status
+ 1076  git add .
+ 1077  git commit -am "language"
+ 1078  mix phx.gen.live Jobs Interest interests     slug:string     name:string     keywords:array:string     description:string     image1:string     image2:string     image3:string     image4:string     image5:string     creator_id:references:users     owner_id:references:users     user_id:references:users     resume_id:references:resumes     resume_user_id:references:users     status:string     embedding:string     highlights:array:string     skills:array:string     is_featured?:boolean     is_free?:boolean     is_invitable?:boolean     is_listed?:boolean     is_premium?:boolean     is_previewable?:boolean     is_private?:boolean     is_active?:boolean
+ 1079  mix ecto.migrate
+ 1080  git status
+ 1081  git add .
+ 1082  git commit -am "interests"
+ 1083  mix phx.gen.live Jobs Reference references     slug:string     name:string     reference:text     description:string     image1:string     image2:string     image3:string     image4:string     image5:string     referee_title:string     referee_relationship:string     referee_id:references:users     referenced_id:references:users     creator_id:references:users     owner_id:references:users     user_id:references:users     resume_id:references:resumes     resume_user_id:references:users     status:string     embedding:string     highlights:array:string     skills:array:string     end_date:datetime     start_date:datetime     is_broadcast?:boolean     is_verified?:boolean     is_availabe?:boolean     is_featured?:boolean     is_free?:boolean     is_invitable?:boolean     is_listed?:boolean     is_premium?:boolean     is_previewable?:boolean     is_private?:boolean     is_active?:boolean
+ 1084  mix ecto.migrate
+ 1085  mix phx.gen.live Jobs Project projects     slug:string     name:string     description:string     image1:string     image2:string     image3:string     image4:string     image5:string     creator_id:references:users     owner_id:references:users     user_id:references:users     resume_id:references:resumes     resume_user_id:references:users     experience_id:references:experiences     status:string     start_date:datetime     end_date:datetime     url:string     embedding:string     highlights:array:string     skills:array:string     is_broadcast?:boolean     is_current?:boolean     is_verified?:boolean     is_availabe?:boolean     is_featured?:boolean     is_free?:boolean     is_invitable?:boolean     is_listed?:boolean     is_premium?:boolean     is_previewable?:boolean     is_private?:boolean     is_active?:boolean
+ 1086  mix ecto.migrate
+ 1087  git status
+ 1088  git add .
+ 1089  git commit -am "project reference"
+ 1090  git status
+ 1091  git checkout lib/folkbot_web/live/website_live/form_component.ex
+ 1092  git add .
+ 1093  git commit -am "fonts
+ 1094  "
+ 1095  git commit -am "fonts
+ 1096  "
+ 1097  git status
+ 1098  git checkout lib/folkbot_web/live/website_live/show.html.heex
+ 1099  git checkout lib/folkbot_web/live/website_live/form_component.ex
+ 1100  git status
+ 1101  git add .
+ 1102  git commit -am "website"
+ 1103  gi status
+ 1104  git status
+ 1105  git checkout lib/folkbot/websites.ex
+ 1106  git checkout lib/folkbot_web/live/chat_live/show.ex
+ 1107  git checkout lib/folkbot_web/live/website_live/form_component.ex
+ 1108  git checkout lib/folkbot_web/live/website_live/index.ex
+ 1109  git checkout lib/folkbot_web/live/website_live/show.ex
+ 1110  git stattus
+ 1111  git status
+ 1112  git checkout lib/folkbot/websites.ex
+ 1113  git checkout lib/folkbot_web/live/website_live/form_component.ex
+ 1114  git checkout lib/folkbot_web/live/website_live/show.ex
+ 1115  cd app
+ 1116  MIX_ENV=dev iex -S mix phx.server
+ 1117  git status
+ 1118  git checkout lib/folkbot/websites.ex
+ 1119  git status
+ 1120  git checkout lib/folkbot_web/live/website_live/show.ex
+ 1121  git status
+ 1122  git checkout lib/folkbot_web/live/website_live/index.ex
+ 1123  git status
+ 1124  git checkout lib/folkbot_web/live/website_live/show.ex
+ 1125  git checkout lib/folkbot/websites.ex
+ 1126  cd ~/Projects/devekko.compose/apps
+ 1127  cd ~/Projects/devekko.compose/app
+ 1128  mix phx.server
+ 1129  cd ~/Projects/
+ 1130  ls
+ 1131  cd todo_trek
+ 1132  git pull
+ 1133  cd ~/Projects/devekko.compose
+ 1134  git status
+ 1135  git add .
+ 1136  git commit -am "live"
+ 1137  git status
+ 1138  git checkout app/lib/folkbot_web/live/website_live/form_component.ex
+ 1139  git checkout app/lib/folkbot/websites.ex
+ 1140  git commit -am "chat fix"
+ 1141  git status
+ 1142  git commit -am "jobs broadcast"
+ 1143  cd app
+ 1144  mix phx.routes
+ 1145  cd ~/Project/devekko.compose
+ 1146  cd ~/Projects/devekko.compose
+ 1147  git status
+ 1148  git add .
+ 1149  git commit -am "show"
+ 1150  git status
+ 1151  git commit -am "shw"
+ 1152  git status
+ 1153  git commit -am "resume"
+ 1154  git status
+ 1155  cd ~/Projects/devekko.compose/app
+ 1156  mix phx.server
+ 1157  cd ~/Projects/devekko.compose/app
+ 1158  mix phx.server
+ 1159  ssh composed
+ 1160  ssh composed
+ 1161  cd ..
+ 1162  git status
+ 1163  git add .
+ 1164  git commit -am "politics"
+ 1165  git status
+ 1166  git add .
+ 1167  git commit -am "resumes"
+ 1168  git status
+ 1169  git commit -am "show"
+ 1170  git status
+ 1171  git add .
+ 1172  git commit -am "resume"
+ 1173  git push
+ 1174  ssh codes
+ 1175  git push
+ 1176  git push --force
+ 1177  git status
+ 1178  git add .
+ 1179  git commit -am "education experience"
+ 1180  git status
+ 1181  git commit -am "jobs"
+ 1182  git push
+ 1183  git status
+ 1184  git add .
+ 1185  git commit -am "jobs"
+ 1186  git status
+ 1187  git push
+ 1188  curl -I http://local.dynamic.gop:4000
+ 1189  whois folkbotmail.com
+ 1190  sudo wg-quick proton up
+ 1191  sudo wg-quick up proton
+ 1192  sudo wg-quick down proton
+ 1193  sudo wg-quick up proton
+ 1194  sudo wg-quick down proton
+ 1195  ssh box
+ 1196  git status
+ 1197  git add .
+ 1198  git commit -am "popcorn"
+ 1199  git push
+ 1200  ssh composed
+ 1201  ssh composed
+ 1202  ssh codes
+ 1203  ssh composed
+ 1204  git status
+ 1205  git commit -am "ex twitter removed"
+ 1206  git push
+ 1207  git commit -am "ex twitter removed"
+ 1208  git push
+ 1209  git status
+ 1210  git status
+ 1211  git commit -am "pull down"
+ 1212  git status
+ 1213  git commit -am "show"
+ 1214  git push
+ 1215  ssh codes
+ 1216  git status
+ 1217  git push
+ 1218  git status
+ 1219  git commit -am "campaigns"
+ 1220  git push
+ 1221  git commit -am "campaigns"
+ 1222  git push
+ 1223  cd app
+ 1224  MIX_ENV=dev iex -S mix phx.server
+ 1225  cd ~/Downloads
+ 1226  sudo dpkg -i Maltego.v4.7.0.deb
+ 1227  cd ~
+ 1228  ssh-keygen -t ed25519 -C "box.folkbotmail.com"
+ 1229  nano ~/.ssh/config
+ 1230  ssh box
+ 1231  nano ~/.ssh/config
+ 1232  ssh box
+ 1233  ssh box
+ 1234  cat ~/.ssh/id_ed25519_box
+ 1235  cat ~/.ssh/id_ed25519_box.pub
+ 1236  nano ~/.ssh/config
+ 1237  cd ~/Projects/devekko.compose
+ 1238  git status
+ 1239  git commit -am "stripe"
+ 1240  git push
+ 1241  ssh codes
+ 1242  ssh code
+ 1243  ssh codes.devekko.dev
+ 1244  ssh roo@codes.devekko.dev
+ 1245  nano ~/.ssh/config
+ 1246  ls ~/.ssh
+ 1247  ssh composed
+ 1248  ssh composed
+ 1249  sudo apt update
+ 1250  sudo apt upgrade -yq
+ 1251  sudo reboot now
+ 1252  cd ~/Projects/devekko.compose
+ 1253  git status
+ 1254  git add .
+ 1255  git commit -am "compose"
+ 1256  git push
+ 1257  ssh codes
+ 1258  git push
+ 1259  cd app
+ 1260  MIX_ENV=dev iex -S mix phx.server
+ 1261  whois globalcivilwar.org
+ 1262  curl -I https://www.archieomichaels.com/
+ 1263  curl -I https://archieomichaels.com/
+ 1264  wavemon
+ 1265  cd app
+ 1266  mix deps.get --all
+ 1267  MIX_ENV=dev iex -S mix phx.server
+ 1268  mix deps.get --all
+ 1269  MIX_ENV=dev iex -S mix phx.server
+ 1270  mix deps.get --all
+ 1271  MIX_ENV=dev iex -S mix phx.server
+ 1272  MIX_ENV=dev iex -S mix phx.servermix deps.get --all
+ 1273  mix deps.ge --all
+ 1274  sudo wg-quick up desktop
+ 1275  ls -alh /etc/wireguard
+ 1276  sudo ls -alh /etc/wireguard
+ 1277  sudo wg-quick up desk
+ 1278  ssh codes
+ 1279  ssh -tv codes
+ 1280  ssh composed
+ 1281  sudo wg-quick down desk
+ 1282  sudo wg-quick up proton
+ 1283  ssh composed
+ 1284  ssh -tv composed
+ 1285  sudo wg-quick down proton
+ 1286  sudo wg-quick up desk
+ 1287  sudo wg-quick down proton
+ 1288  sudo wg-quick down dek
+ 1289  sudo wg-quick down desk
+ 1290  sudo ls -alh /etc/wireguard
+ 1291  sudo wg-quick up wg0.conf
+ 1292  sudo wg-quick up wg0
+ 1293  ssh codes
+ 1294  ssh composed
+ 1295  ssh codes
+ 1296  sudo wg-quick down wg0
+ 1297  sudo wg-quick up wg0
+ 1298  cd ~/Projects/folkbot.op
+ 1299  cd ~/Projects/folkbot.ops
+ 1300  debops run torn-codes.yml -l forgejo -vv --tags ferm
+ 1301  cd ../devekko.ops
+ 1302  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml
+ 1303  ssh coomposed
+ 1304  ssh composed
+ 1305  sudo wg-quick down wg0
+ 1306  ssh composed
+ 1307  ssh root@216.128.130.220
+ 1308  sudo wg-quick up proton
+ 1309  sudo wg-quick down proton
+ 1310  ssh composed
+ 1311  ssh composed
+ 1312  sa
+ 1313  sudo wg-quick up proton
+ 1314  sudo wg-quick down proton
+ 1315  ssh root@45.77.157.14
+ 1316  sudo apt-get install -y speedometer -yq
+ 1317  ifconfig
+ 1318  speedometer -r enx0c379663b386 -c -r lo
+ 1319  cd app
+ 1320  MIX_ENV=dev iex -S mix phx.server
+ 1321  mix deps.get --all
+ 1322  MIX_ENV=dev iex -S mix phx.server
+ 1323  MIX_ENV=dev iex -S mix phx.server LOG_LVEL
+ 1324  mix
+ 1325  iex
+ 1326  ssh c
+ 1327  ssh composed
+ 1328  ssh composed
+ 1329  git status
+ 1330  git commit -am "ecto upgrade"
+ 1331  git push
+ 1332  ssh composed
+ 1333  ssh composed
+ 1334  ssh composed
+ 1335  ssh composed
+ 1336  cd ..
+ 1337  git status
+ 1338  git add .
+ 1339  git commit -am "ai etc""
+ 1340  \
+ 1341  git commit -am "ai etc"
+ 1342  git push
+ 1343  ssh codes
+ 1344  git push
+ 1345  git commit -am "websites"
+ 1346  git push
+ 1347  ssh composed
+ 1348  git status
+ 1349  git add .
+ 1350  git commit -am "uniq"
+ 1351  git push
+ 1352  git status
+ 1353  git push
+ 1354  git commit -am "uniq"
+ 1355  git push
+ 1356  git status
+ 1357  git commit -am "channel"
+ 1358  git push
+ 1359  git commit -am "channels renmoved"
+ 1360  git push
+ 1361  ssh rsync
+ 1362  ssh gcrypt
+ 1363  ssh gcrypt -tv
+ 1364  nano ~/.ssh/config
+ 1365  ssh rsync1
+ 1366  ssh rsync1 ls -alh
+ 1367  git push
+ 1368  cd app
+ 1369  MIX_ENV=dev iex -S mix phx.server LOG_LEVEL=info
+ 1370  MIX_ENV=dev iex -S mix phx.server LOG=info
+ 1371  git status
+ 1372  git commit -am "status"
+ 1373  git push
+ 1374  git commit -am "status"
+ 1375  git push
+ 1376  ssh composed
+ 1377  curl -Ik https://citizensuccess.com
+ 1378  curl -Ik https://www.citizensuccess.com
+ 1379  ssh root@144.202.72.190
+ 1380  ssh composed
+ 1381  ssh codes
+ 1382  ssh composed
+ 1383  cd ~/Projects/devekko.compose/appp
+ 1384  cd ~/Projects/devekko.compose/app
+ 1385  MIX_ENV=dev iex -S mix phx.server
+ 1386  ssh composed
+ 1387  ssh root@45.77.157.14
+ 1388  cd ~/Projects/devekko/devekko.compose
+ 1389  cd ~/Projects/devekko.compose
+ 1390  git pull
+ 1391  git status
+ 1392  git commit -am "post"
+ 1393  git push
+ 1394  cd ~/Projects/devekko.compose
+ 1395  mix phx.routes
+ 1396  cd app
+ 1397  mix phx.routes
+ 1398  ssh composed
+ 1399  ssh composed
+ 1400  cd ~/Projects/devekko.compose/
+ 1401  git status
+ 1402  git add .
+ 1403  git commit -am "posts"
+ 1404  git push
+ 1405  ssh codes
+ 1406  git status
+ 1407  git push
+ 1408  git status
+ 1409  git commit -am "posts"
+ 1410  git push
+ 1411  git status
+ 1412  git commit -am "var"
+ 1413  git push
+ 1414  cd ~/Projects/devekko.compose/app
+ 1415  MIX_ENV=dev iex -S mix phx.server
+ 1416  ssh composed
+ 1417  git status
+ 1418  ls postgresml-data
+ 1419  ls -alh postgresml-data
+ 1420  ssh composed
+ 1421  git status
+ 1422  git checkout lib/folkbot_web/controllers/post_controller.ex
+ 1423  git status
+ 1424  git add .
+ 1425  git commit -am "post crazy"
+ 1426  git push
+ 1427  ssh codes
+ 1428  git push
+ 1429  git status
+ 1430  mix ecto.migrate
+ 1431  docker
+ 1432  docker ps
+ 1433  cd app
+ 1434  MIX_ENV=dev iex -S mix phx.server
+ 1435  ssh composed
+ 1436  git status
+ 1437  git commit -am "posts"
+ 1438  git push
+ 1439  git status
+ 1440  git commit -am "posts"
+ 1441  git push
+ 1442  git status
+ 1443  git commit -am "postgres 16 bookworm"
+ 1444  git push
+ 1445  git commit -am "postgres 16 bookworm"
+ 1446  git push
+ 1447  cd ..
+ 1448  git status
+ 1449  git commit -am "stageapp"
+ 1450  git push
+ 1451  ssh composed
+ 1452  git commit -am "stageapp"
+ 1453  git push
+ 1454  git status
+ 1455  git add .
+ 1456  git commit -am "postgres"
+ 1457  git push
+ 1458  ssh codes
+ 1459  git push
+ 1460  git status
+ 1461  git commit -am "postgres"
+ 1462  git push
+ 1463  ssh composed
+ 1464  ssh codes
+ 1465  cd ~/Projects/new
+ 1466  mkdir ~/Projects/new
+ 1467  cd ~/Projects/new
+ 1468  git clone ssh://gitea@codes.devekko.dev:2222/devekko/devekko.compose.git
+ 1469  git config --global core.compression 0
+ 1470  git clone ssh://gitea@codes.devekko.dev:2222/devekko/devekko.compose.git
+ 1471  nano ~/.gitconfig
+ 1472  git clone ssh://gitea@codes.devekko.dev:2222/devekko/devekko.compose.git
+ 1473  nano ~/.gitconfig
+ 1474  git clone ssh://gitea@codes.devekko.dev:2222/devekko/devekko.compose.git
+ 1475  ssh codes
+ 1476  ssh codes
+ 1477  cd ~/Projects/devekko.compose
+ 1478  git push
+ 1479  git status
+ 1480  git commit -am "folkbot prod"
+ 1481  git push
+ 1482  git commit -am "git pack"
+ 1483  git push
+ 1484  rm -fr .git
+ 1485  git status
+ 1486  cd ~/Projects/devekko/devekko.compose
+ 1487  cd ~/Projects/devekko.compose
+ 1488  git status
+ 1489  git commit -am "remove sql"
+ 1490  git push
+ 1491  ssh codes
+ 1492  git push
+ 1493  git stattus
+ 1494  git status
+ 1495  git stattus
+ 1496  git log
+ 1497  git reset --hard b635c9774308b44823976ec54095059e125eb61f
+ 1498  git status
+ 1499  git push
+ 1500  git push --force
+ 1501  git status
+ 1502  git commit -am "db"
+ 1503  git push
+ 1504  git push --force
+ 1505  ssh composed
+ 1506  cd ~/Projects/folkbot.ops
+ 1507  scram-sha-256 tune6dinghyDuel2meadow7odd6stocky
+ 1508  ./scram-sha-256-linux-x86_64 tune6dinghyDuel2meadow7odd6stocky
+ 1509  ssh composed
+ 1510  cd ~/Projects/devekko.ops
+ 1511  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml
+ 1512  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml --tags postgres
+ 1513  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml
+ 1514  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml --tags postgres -vvv
+ 1515  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml --tags postgres -vv
+ 1516  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml --tags ferm -vv
+ 1517  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml --tags postgres -vv
+ 1518  ssh composed
+ 1519  # ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml --tags postgres
+ 1520  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml --tags postgres
+ 1521  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml --tags ferm
+ 1522  ssh composed
+ 1523  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml --tags postgres
+ 1524  ssh composed
+ 1525  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml --tags postgres
+ 1526  ssh composed
+ 1527  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml --tags postgres
+ 1528  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml --tags ferm
+ 1529  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml
+ 1530  sudo wg-quick up proton
+ 1531  sudo wg-quick down proton
+ 1532  cd ~/Projects/
+ 1533  ls
+ 1534  cd devekko.compose
+ 1535  cd app
+ 1536  MIX_ENV=dev iex -S mix phx.server
+ 1537  dig replacementautomation.com
+ 1538  ssh small
+ 1539  ssh-keygen -f "/home/niccolox/.ssh/known_hosts" -R "144.202.72.190"
+ 1540  sed -i '69d' /home/niccolox/.ssh/known_hosts
+ 1541  ssh small
+ 1542  ssh-keygen -f "/home/niccolox/.ssh/known_hosts" -R "144.202.72.190"
+ 1543  sed -i '101d' /home/niccolox/.ssh/known_hosts
+ 1544  ssh small
+ 1545  ssh composed
+ 1546  cd ~/Projects/devekko.compose
+ 1547  git status
+ 1548  ssh 144.202.100.55 
+ 1549  ssh 144.202.100.55
+ 1550  sudo wg-quick down wg0
+ 1551  ssh 144.202.100.55
+ 1552  cd ..
+ 1553  git clone https://github.com/niccolox/full-stack-fastapi-template.git
+ 1554  cd devekko.compose
+ 1555  docker compose ps
+ 1556  docker compose stop postgresml
+ 1557  curl -Ik https://www.replacementautomation.com
+ 1558  curl -I https://www.replacementautomation.com
+ 1559  ipconfig
+ 1560  ip
+ 1561  ip -a
+ 1562  ssh-keygen -t ed25519 -C "small.devekko.dev"
+ 1563  ssh composed
+ 1564  sudo wg-quick down proton
+ 1565  sudo wg-quick down wg0
+ 1566  sudo wg-quick up wg0
+ 1567  ssh composed
+ 1568  ssh composed
+ 1569  nano ~/.ssh/config
+ 1570  cat ~/.ssh/id_ed25519_small.pub
+ 1571  nano ~/.ssh/config
+ 1572  sudo nano /etc/hosts
+ 1573  cd ~/Projects/devekko.ops
+ 1574  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml 
+ 1575  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml --tags postgres
+ 1576  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml
+ 1577  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml --tags rclone
+ 1578  ansible-playbook -i ansible/inventory/hosts -l compose_prod ansible/site-composed.yml --tags postgresqlbackup
+ 1579  cd ..
+ 1580  git clone https://github.com/tanguilp/cacheable_liveviews.git
+ 1581  rm -fr cacheable_liveviews/
+ 1582  git clone https://github.com/tanguilp/cacheable_liveviews.git
+ 1583  cd cacheable_liveviews/
+ 1584  mix deps.get --all
+ 1585  asdf install
+ 1586  mix deps.get --all
+ 1587  MIX_ENV iex -S mix phx.server
+ 1588  MIX_ENV=dev iex -S mix phx.server
+ 1589  ssh codes
+ 1590  ssh root@codes.devekko.dev
+ 1591  sudo wg-quick up wg0
+ 1592  ssh codes
+ 1593  docker compose logs
+ 1594  docker compose logs backend 
+ 1595  docker compose logs frontend
+ 1596  sudo systemctl disable apache2
+ 1597  sudo apt remove apache2
+ 1598  docker compose watch
+ 1599  netstat -nlpn
+ 1600  netstat -nlpn | grep "80"
+ 1601  netstat | grep "80"
+ 1602  netstat | grep "80" 
+ 1603  netstat | grep " 80 " 
+ 1604  netstat -tulpn | grep ':80'
+ 1605  sudo lsof -i -P -n | grep LISTEN
+ 1606  sudo service apache2 stop
+ 1607  sudo service apache2 disable
+ 1608  docker compose watch
+ 1609  netstat -tulpn | grep ':5432'
+ 1610  docker compose watch
+ 1611  curl -X POST /v1/embeddings      -H "Content-Type: application/json"      -d '{
+ 1612    "input": "input"
+ 1613  }'
+ 1614  curl -X POST http://localhost:8001/v1/embeddings      -H "Content-Type: application/json"      -d '{
+ 1615    "input": "input"
+ 1616  }'
+ 1617  curl -X POST http://localhost:8001/v1/embeddings      -H "Content-Tyhealthon/json"      -d '{
+ 1618    "input": "input"
+ 1619  }'
+ 1620  curl -X POST http://localhost:8001/v1/embe/health'
+ 1621  curl -X POST http://localhost:8001/v1/embe/health
+ 1622  curl -X POST http://localhost:8001/health
+ 1623  curl http://localhost:8001/health
+ 1624  curl http://localhost:8001/v1/summarize
+ 1625  curl -X POST http://localhost:8001/v1/summarize
+ 1626  docker compose ps
+ 1627  cd ~/Projects/
+ 1628  cd private-gpt/
+ 1629  docker compose ps
+ 1630  python -v
+ 1631  python3 -v
+ 1632  python3
+ 1633  sudo apt update
+ 1634  sudo apt upgrade -yq
+ 1635  python3
+ 1636  sudo add-apt-repository ppa:deadsnakes/ppa
+ 1637  ls /etc/apt/sources.list.d
+ 1638  ls -alh /etc/apt/sources.list.d
+ 1639  rm /etc/apt/sources.list.d/stripe.list
+ 1640  sudo rm /etc/apt/sources.list.d/stripe.list
+ 1641  sudo rm /etc/apt/sources.list.d/stripe.list.save
+ 1642  sudo apt update
+ 1643  ls -alh /etc/apt/sources.list.d
+ 1644  sudo rm /etc/apt/sources.list.d/manticoresearch.list
+ 1645  sudo rm /etc/apt/sources.list.d/manticoresearch.list.save
+ 1646  sudo apt update
+ 1647  ls -alh /etc/apt/sources.list.d
+ 1648  sudo rm /etc/apt/sources.list.d/brave-browser-release.list
+ 1649  sudo rm /etc/apt/sources.list.d/brave-browser-release.list.save
+ 1650  sudo apt update
+ 1651  ls -alh /etc/apt/sources.list.d
+ 1652  ls -alh /etc/apt/sources.list.d/apt_postgresql_org_pub_repos_apt.list
+ 1653  cat /etc/apt/sources.list.d/apt_postgresql_org_pub_repos_apt.list
+ 1654  sudo rm /etc/apt/sources.list.d/apt_postgresql_org_pub_repos_apt.list
+ 1655  sudo rm /etc/apt/sources.list.d/apt_postgresql_org_pub_repos_apt.list.save
+ 1656  sudo apt update
+ 1657  ls -alh /etc/apt/sources.list.d
+ 1658  nano /etc/apt/sources.list
+ 1659  sudo apt update
+ 1660  ls -alh /etc/apt/sources.list.d
+ 1661  cat /etc/apt/sources.list.d/pgadmin4.list
+ 1662  sudo rm /etc/apt/sources.list.d/pgadmin4.list
+ 1663  sudo apt update
+ 1664  sudo grep -r "https://apt.postgresql.org/pub/repos/apt" /etc/apt/sources.list.d
+ 1665  sudo rm /etc/apt/sources.list.d/pgdg.sources
+ 1666  sudo apt update
+ 1667  sudo apt upgrade
+ 1668  sudo apt update
+ 1669  sudo apt list | grep python3.12
+ 1670  sudo apt install python3.12
+ 1671  python3 --version
+ 1672  python3.12 --version
+ 1673  python3.12 -m venv env
+ 1674  ls -alh /usr/bin/
+ 1675  ls -alh /usr/bin/python*
+ 1676  pip
+ 1677  pip3
+ 1678  sudo apt remove --purge python3-apt
+ 1679  sudo apt autoclean
+ 1680  sudo apt install python3-apt
+ 1681  pip3
+ 1682  python3 --version
+ 1683  ls -alh /usr/bin/python*
+ 1684  sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8
+ 1685  sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
+ 1686  sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 2
+ 1687  sudo update-alternatives --config python3
+ 1688  python3 --version
+ 1689  echo "alias python=/usr/bin/python3" >> ~/.bashrc
+ 1690  echo "alias py=/usr/bin/python3" >> ~/.bashrc
+ 1691  cd ~/
+ 1692  cd ~/Projects
+ 1693  git clone git clone https://github.com/zylon-ai/private-gpt.git
+ 1694  cd private-gpt
+ 1695  git clone https://github.com/zylon-ai/private-gpt.git
+ 1696  cd private-gpt
+ 1697  docker-compose --profile ollama-cuda up
+ 1698  docker run -i -t -p 8888:8888 continuumio/anaconda3 /bin/bash -c "\
+ 1699      conda install jupyter -y --quiet && \
+ 1700      mkdir -p /opt/notebooks && \
+ 1701      jupyter notebook \
+ 1702      --notebook-dir=/opt/notebooks --ip='*' --port=8888 \
+ 1703      --no-browser --allow-root"
+ 1704  docker ps
+ 1705  docker compose ps
+ 1706  cd 
+ 1707  pwd
+ 1708  cd ~/Projects
+ 1709  mkdir conda
+ 1710  cd conda
+ 1711  sudo apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+ 1712  curl -O https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
+ 1713  bash ~/Anaconda3-2024.10-1-Linux-x86_64.sh
+ 1714  bash ./Anaconda3-2024.10-1-Linux-x86_64.sh
+ 1715  conda config --set auto_activate_base false
+ 1716  pd
+ 1717  python
+ 1718  cd ~/Downloads
+ 1719  ls
+ 1720  ls -alh
+ 1721  sudo dpkg -i codium_1.95.3.24321_amd64.deb
+ 1722  sudo apt update
+ 1723  conda
+ 1724  cd ~/Projects
+ 1725  git clone https://github.com/mpolinowski/sklearn-model-deployment.git
+ 1726  pip install jupyter
+ 1727  sudo wg-quick wg up
+ 1728  sudo wg-quick proton up
+ 1729  sudo wg-quick up proton
+ 1730  sudo wg-quick down proton
+ 1731  speedometer -r wlp0s20f3 -c -r lo
+ 1732  sudo speedometer -r wlp0s20f3 -c -r lo
+ 1733  sudo apt install speedometer
+ 1734  sudo speedometer -r wlp0s20f3 -c -r lo
+ 1735  git clone https://github.com/mpolinowski/sklearn-model-deployment.gitTraceback (most recent call last):
+ 1736  ls /usr/bin/python*
+ 1737  sudo update-alternatives --config python
+ 1738  sudo update-alternatives --config python3
+ 1739  sudo speedometer -r wlp0s20f3 -c -r lo
+ 1740  sudo update-alternatives --config python3
+ 1741  sudo speedometer -r wlp0s20f3 -c -r lo
+ 1742  sudo wg-quick up proton
+ 1743  sudo wg-quick down proton
+ 1744  sudo speedometer -r wlp0s20f3 -c -r lo
+ 1745  cd ~/Projects
+ 1746  git clone https://github.com/team-alembic/realworld.git
+ 1747  git clone https://github.com/basecamp/kamal.git
+ 1748  git clone https://github.com/niccolox/full-stack-fastapi-sandbox.git
+ 1749  sudo wg-quick proton up
+ 1750  sudo wg-quick up proton
+ 1751  sudo wg-quick down proton
+ 1752  cd ~/Projects/devekko_dev
+ 1753  ls
+ 1754  cd liveshop
+ 1755  mix deps.get --all
+ 1756  MIX_ENV=dev iex -S mix phx.server
+ 1757  cd ~/Projects/devekko_dev
+ 1758  cd liveshop
+ 1759  mix ash.setup
+ 1760  mix ash.codegen initial_migration
+ 1761  mix archive.install hex igniter_new
+ 1762  cd ~/Projects
+ 1763  mkdir devekko_ash
+ 1764  cd devekko_ash
+ 1765  asdf install
+ 1766  asdf local elixir 1.17
+ 1767  asdf local erlang 27.0
+ 1768  asdf install
+ 1769  mix archive.install hex igniter_new
+ 1770  mix archive.install hex phx_new
+ 1771  mix igniter.new liveshop --install ash,ash_phoenix --with phx.new && cd liveshop
+ 1772  cd ..
+ 1773  cd ~/Projects/devekko_ash/
+ 1774  mix igniter.new helpdesk   --install ash,ash_postgres,ash_phoenix   --with phx.new   --extend postgres \
+ 1775  mix igniter.new liveshop   --install ash,ash_postgres,ash_phoenix   --with phx.new   --extend postgres   --example
+ 1776  ls
+ 1777  cd liveshop
+ 1778  asdf install
+ 1779  asdf local erlang 27.0.1
+ 1780  asdf local elixir 1.17.2-otp-27
+ 1781  git status
+ 1782  git init 
+ 1783  git add .
+ 1784  git commit -am "Phoenix Live Shop Elixir Ash Phoenix LiveView"
+ 1785  git remote add origin https://github.com/niccolox/elixir_ash_phoenix_liveshop.git
+ 1786  git push -u origin main
+ 1787  git push -u origin master
+ 1788  git remote remove origin
+ 1789  git remote add origin git@github.com:niccolox/elixir_ash_phoenix_liveshop.git
+ 1790  git push -u origin master
+ 1791  git push -u origin master -v
+ 1792  git push -u origin main
+ 1793  git push -u origin master -v
+ 1794  git push -u origin main
+ 1795  git push -u origin master -v
+ 1796  cd ..
+ 1797  ls
+ 1798  ls -alh
+ 1799  cd liveshop
+ 1800  ls
+ 1801  rm -fr .git
+ 1802  ls -alh
+ 1803  cd ..
+ 1804  git status
+ 1805  cd ..
+ 1806  cd devekko_dev
+ 1807  ls
+ 1808  cd compose
+ 1809  docker compose build postgres
+ 1810  cd ..
+ 1811  cd ansible
+ 1812  cd ../compose
+ 1813  docker compose build postgres
+ 1814  docker compose -f docker-compose.yml build postgres
+ 1815  docker compose
+ 1816  docker compose build
+ 1817  docker compose -f docker-compose.yml build postgres
+ 1818  docker compose -f docker-compose.yml build owasp
+ 1819  docker compose -f docker-compose.yml build owasp -vvv
+ 1820  docker compose -f docker-compose.yml build owasp -v
+ 1821  docker compose -f docker-compose.yml build owasp -verbose
+ 1822  docker compose -f docker-compose.yml build owasp 
+ 1823  docker compose -f docker-compose.yml ls
+ 1824  docker compose -f docker-compose.yml ps
+ 1825  docker compose -f docker-compose.yml up postgres
+ 1826  docker compose ps
+ 1827  docker ps
+ 1828  docker stop 708034e2920d
+ 1829  docker compose -f docker-compose.yml up postgres
+ 1830  docker compose watch
+ 1831  docker ps
+ 1832  docker stop 708034e2920d
+ 1833  docker compose watch
+ 1834  docker compose stop
+ 1835  docker compose exec backend bash
+ 1836  docker compose watch
+ 1837  docker compose stop
+ 1838  docker compose watch
+ 1839  docker compose ps
+ 1840  docker compose ps --all
+ 1841  docker compose exec backend bash
+ 1842  docker compose start backend
+ 1843  docker compose exec backend bash
+ 1844  docker compose logs backend
+ 1845  docker compose stop backend
+ 1846  cd backend
+ 1847  fastapi dev app/main.py
+ 1848  watch docker compose logs
+ 1849  docker compose backend logs
+ 1850  docker compose logs
+ 1851  curl http://127.0.0.1:8000/query-params-items/?skip=0&limit=10
+ 1852  curl http://127.0.0.1:8000/query-params-items/
+ 1853  curl http://127.0.0.1:8000/query-params-items/?skip=0&limit=2
+ 1854  curl http://127.0.0.1:8000/query-params-items/?skip=1&limit=2
+ 1855  curl http://127.0.0.1:8000/query-params-items/?skip=0&limit=2
+ 1856  curl http://127.0.0.1:8000/query-params-items/?limit=2
+ 1857  curl http://127.0.0.1:8000/query-params-items/?skip=1&limit=2
+ 1858  curl http://127.0.0.1:8000/query-params-items/
+ 1859  curl http://127.0.0.1:8000/query-params-items/?skip=1&limit=2
+ 1860  curl http://127.0.0.1:8000/query-params-items/
+ 1861  curl http://127.0.0.1:8000/users/1/items/yo
+ 1862  pip install "fastapi[standard]"
+ 1863  python -m venv .venv
+ 1864  sudo apt install python3.8-venv
+ 1865  python -m venv .venv
+ 1866  pip install "fastapi[standard]"
+ 1867  source .venv/bin/activate
+ 1868  which python
+ 1869  python -m pip install --upgrade pip
+ 1870  fastapi[standard]==0.113.0
+ 1871  pip install -r requirements.txt
+ 1872  fastapi dev main.py
+ 1873  nano ~/.profile
+ 1874  source ~/.profile
+ 1875  nano ~/.profile
+ 1876  cd ~/Downloads
+ 1877  sudo dpkg -i expo-orbit_2.0.1_amd64.deb 
+ 1878  sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+ 1879  cd ~/Applications
+ 1880  cd android/android-studio/
+ 1881  cd bin
+ 1882  ./studio.sh
+ 1883  cd /home/niccolox/Applications/android/android-studio/bin
+ 1884  ./start.sh
+ 1885  ./studio.sh
+ 1886  npx expo install expo-image
+ 1887  asdf install nodejs 18.18
+ 1888  asdf install nodejs 18.18.0
+ 1889  npx expo install expo-image
+ 1890  npx create-expo-app@latest
+ 1891  mkdir frontend
+ 1892  cd frontend
+ 1893  npx create-expo-app@latest
+ 1894  cd ..
+ 1895  rm -fr frontend
+ 1896  asdf install nodejs 18.13.0
+ 1897  asdf local nodejs 18.13.0
+ 1898  npx create-expo-app@latest
+ 1899  nano ~/.bashrc
+ 1900  source ~/bashrc
+ 1901  source ~/.bashrc
+ 1902  cd frontend 
+ 1903  npx expo start
+ 1904  source ~/.bashrc
+ 1905  nano ~/.bashrc
+ 1906  source ~/.bashrc
+ 1907  npx expo start
+ 1908  nano ~/.bashrc
+ 1909  source ~/.bashrc
+ 1910  npx expo start
+ 1911  npm run reset-project
+ 1912  npx expo start
+ 1913  cd backend
+ 1914  source .venv/bin/activate
+ 1915  fastapi dev main.py
+ 1916  cd ~/Applications
+ 1917  cd android/
+ 1918  ls
+ 1919  cd android-studio/
+ 1920  ls
+ 1921  cd bin
+ 1922  ./studio.sh
+ 1923  cd frontend
+ 1924  npx expo start
+ 1925  npx expo start --help
+ 1926  npx expo start
+ 1927  npx expo install expo-image-picker
+ 1928  npm install @expo/vector-icons
+ 1929  npm install @expo/vector-icons/MaterialIcons
+ 1930  npm install @expo/vector-icons
+ 1931  cd frontend
+ 1932  npx expo start
+ 1933  cd Projects
+ 1934  mkdir stack_devekko_dev
+ 1935  cd stack_devekko_dev
+ 1936  mkdir
+ 1937  cd fastapi/
+ 1938  asdf plugin-add python
+ 1939  asdf
+ 1940  asdf list all python
+ 1941  asdf install 
+ 1942  asdf install python 3.10.0
+ 1943  python -V
+ 1944  asdf local python 3.10.0
+ 1945  python -V
+ 1946  whereis python
+ 1947  whereis python -ls
+ 1948  whereis python -l
+ 1949  whereis python
+ 1950  whereis python 3.10
+ 1951  whereis python | grep "3.10"
+ 1952  python -V
+ 1953  python3 -V
+ 1954  asdf
+ 1955  asdf reshim python 3.10.0
+ 1956  python -V
+ 1957  sudo apt install libffi-dev libncurses5-dev zlib1g zlib1g-dev libssl-dev libreadline-dev libbz2-dev libsqlite3-dev
+ 1958  python -V
+ 1959  asdf reshim python 3.10.0
+ 1960  python -V
+ 1961  asdf install
+ 1962  asdf local python 3.10.0
+ 1963  python -V
+ 1964  nano ~//profile
+ 1965  nano ~/.profile
+ 1966  nano ~/.bashrc
+ 1967  source ~/.bashrc
+ 1968  python -V
+ 1969  whereis python
+ 1970  source ~/.bashrc
+ 1971  whereis python
+ 1972  python -V
+ 1973  asdf which python
+ 1974  nano ~/.asdf/shims/python
+ 1975  asdf update
+ 1976  asdf reshim python 3.12.0
+ 1977  asdf install local 3.12.0 
+ 1978  asdf local 3.12.0 
+ 1979  asdf local python 3.12.0 
+ 1980  asdf install local
+ 1981  asdf install
+ 1982  asdf reshim python 3.12.0
+ 1983  python --version
+ 1984  sudo apt-preferences
+ 1985  sudo dpkg --configure -a
+ 1986  sudo dpkg --configure
+ 1987  sudo apt-cache policy python
+ 1988  sudo apt-cache policy python3
+ 1989  python3
+ 1990  curl -d '{"ticker":"MSFT", "forecast":"UP"}' -H "Content-Type: application/json" -X POST http://localhost:8004/predict/stocks
+ 1991  curl http://localhost:8004/predict/stocks
+ 1992  curl http://localhost:8004/ping
+ 1993  curl http://localhost:8004/predict/stocks
+ 1994  curl http://localhost:8004/ping
+ 1995  curl http://localhost:8004/predict/stocks
+ 1996  curl -d '{"ticker":"MSFT", "forecast":"UP"}' -H "Content-Type: application/json" -X POST http://localhost:8004/predict/stocks
+ 1997  curl http://localhost:8004/predict/stocks
+ 1998  curl -d '{"ticker":"MSFT", "forecast":"UP"}' -H "Content-Type: application/json" -X POST http://localhost:8004/predict/stocks
+ 1999  curl http://localhost:8004/ping
+ 2000  curl -d '{"ticker":"MSFT", "forecast":"UP"}' -H "Content-Type: application/json" -X POST http://localhost:8004/predict/stocks
+ 2001  curl http://localhost:8004/predict/stocks
+ 2002  curl -d '{"ticker":"MSFT", "forecast":"UP"}' -H "Content-Type: application/json" -X POST http://localhost:8004/predict/stocks
+ 2003  curl http://localhost:8004/predict/stocks
+ 2004  # Microsoft
+ 2005  curl -d '{"ticker":"MSFT", "forecast":"UP"}' -H "Content-Type: application/json" -X POST http://localhost:8004/predict/stocks
+ 2006  # News Corp
+ 2007  curl -d '{"ticker":"NWS", "forecast":"UP"}' -H "Content-Type: application/json" -X POST http://localhost:8004/predict/stocks
+ 2008  # Oracle
+ 2009  curl -d '{"ticker":"ORCL", "forecast":"UP"}' -H "Content-Type: application/json" -X POST http://localhost:8004/predict/stocks
+ 2010  # Tesla
+ 2011  curl -d '{"ticker":"TLSA", "forecast":"UP"}' -H "Content-Type: application/json" -X POST http://localhost:8004/predict/stocks
+ 2012  # Palantir
+ 2013  curl -d '{"ticker":"PLTR", "forecast":"UP"}' -H "Content-Type: application/json" -X POST http://localhost:8004/predict/stocks
+ 2014  curl http://localhost:8004/predict/stocks
+ 2015  curl -d http://localhost:8004/predict/stocks
+ 2016  curl http://localhost:8004/predict/stocks
+ 2017  history > curl.txt
