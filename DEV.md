@@ -104,3 +104,4 @@ mix igniter.install ash_authentication
 
 
 
+mix ash_authentication.add_strategy password
