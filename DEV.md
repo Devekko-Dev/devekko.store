@@ -37,5 +37,8 @@ mix ash.gen.resource Store.Products.Product \
     ash_cloak --auth-strategy password \
     --auth-strategy magic_link --yes && mix ash.setup
 
+
+mix igniter.install ash_postgres
+
 mix igniter.install ash_authentication
 
