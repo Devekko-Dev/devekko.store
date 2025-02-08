@@ -12,7 +12,7 @@ config :spark, formatter: ["Ash.Resource": [section_order: [:postgres]]]
 config :store,
   ecto_repos: [Store.Repo],
   generators: [timestamp_type: :utc_datetime],
-  ash_domains: [Store.Seller, Store.Stores]
+  ash_domains: [Store.Product, Store.Seller, Store.Stores]
 
 # Configures the endpoint
 config :store, StoreWeb.Endpoint,

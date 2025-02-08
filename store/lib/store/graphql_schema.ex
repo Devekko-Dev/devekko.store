@@ -2,7 +2,7 @@ defmodule Store.GraphqlSchema do
   use Absinthe.Schema
 
   use AshGraphql,
-    domains: []
+    domains: [Store.Product]
 
   import_types(Absinthe.Plug.Types)
 

@@ -68,5 +68,28 @@ mix ash.gen.resource Store.Seller.Seller \
   --timestamps \
   --extend postgres,graphql,json_api
 
+mix ash.gen.resource Store.Product.Product \
+  --default-actions read \
+  --uuid-primary-key id \
+  --attribute sku:string:required:public \
+  --attribute name:string:required:public \
+  --attribute slug:string:required:public \
+  --attribute subtitle:string:public \
+  --attribute description:string:required:public \
+  --attribute featured_image:string:required:public \
+  --attribute images:map:public \
+  --attribute featured:boolean:required:public \
+  --attribute order:integer:public \
+  --attribute stripe_id:string:required:public \
+  --attribute price:decimal:required:public \
+  --relationship belongs_to:seller:Store.Seller.Seller \
+  --timestamps \
+  --extend postgres,graphql,json_api,AshAdmin.Resource
+
+mix ash.codegen create_seller
+
+
+
+
 mix igniter.install ash_authentication
 
