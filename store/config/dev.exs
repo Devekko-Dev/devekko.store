@@ -59,7 +59,9 @@ config :store, StoreWeb.Endpoint,
     patterns: [
       ~r"priv/static/(?!uploads/).*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/store_web/(controllers|live|components)/.*(ex|heex)$"
+      ~r"lib/store_web/(controllers|live|components)/.*(ex|heex)$",
+      ~r"lib/store/.*/.*(ex|heex)$",
+      ~r"lib/store/.*(ex|heex)$"
     ]
   ]
 
