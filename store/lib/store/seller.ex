@@ -1,5 +1,5 @@
 defmodule Store.Seller do
-  use Ash.Domain, otp_app: :store, extensions: [AshGraphql.Domain, AshJsonApi.Domain]
+  use Ash.Domain, otp_app: :store, extensions: [AshGraphql.Domain, AshJsonApi.Domain, AshPhoenix]
 
   resources do
     resource Store.Seller.Seller do
