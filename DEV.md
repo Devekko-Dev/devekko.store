@@ -37,10 +37,13 @@ mix ash.gen.resource Store.Products.Product \
     ash_cloak --auth-strategy password \
     --auth-strategy magic_link --yes && mix ash.setup
 
+mix igniter.install ash_authentication
 
 
+
+
+mix ash.gen.domain Store.Admin
 mix ash.gen.domain Store.Customer
-mix ash.gen.domain Store.Account
 mix ash.gen.domain Store.Store
 mix ash.gen.domain Store.Catalog
 mix ash.gen.domain Store.Product
@@ -50,12 +53,40 @@ mix ash.gen.domain Store.Shipping
 mix ash.gen.domain Store.Inventory
 mix ash.gen.domain Store.Payment
 
+mix ash.gen.domain Store.Admin
+
+mix ash.gen.resource Store.Admin.Admin \
+  --default-actions read \
+  --uuid-primary-key id \
+  --attribute slug:string:required:public \
+  --attribute first_name:string:required:public \
+  --attribute last_name:string:required:public \
+  --attribute street1:string:required:public \
+  --attribute street2:string:required:public \
+  --attribute city:string:required:public \
+  --attribute state:string:required:public \
+  --attribute zip:string:required:public \
+  --attribute country:string:required:public \
+  --attribute notes:string:required:public \
+  --attribute x:string:required:public \
+  --attribute facebook:string:required:public \
+  --attribute instagram:string:required:public \
+  --attribute domain:string:required:public \
+  --attribute email:string:required:public \
+  --attribute phone:string:required:public \
+  --attribute status:string:required:public \
+  --attribute role:string:required:public \
+  --relationship has_many:store:Store.Store.Store \
+  --timestamps \
+  --extend postgres,graphql,json
+
 
 mix ash.gen.domain Store.Customer
 
 mix ash.gen.resource Store.Customer.Customer \
   --default-actions read \
   --uuid-primary-key id \
+  --attribute slug:string:required:public \
   --attribute first_name:string:required:public \
   --attribute last_name:string:required:public \
   --attribute street1:string:required:public \
