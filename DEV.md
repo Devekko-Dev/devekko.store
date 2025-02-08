@@ -90,8 +90,9 @@ mix ash.gen.resource Store.Product.Product \
 
 mix ash.codegen create_seller_product
 
+mix ash_phoenix.gen.live --domain Store.Seller --resource Store.Seller.Seller --resourceplural sellers
 
-
+why so many questions? 
 
 mix igniter.install ash_authentication
 
