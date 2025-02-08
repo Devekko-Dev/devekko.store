@@ -21,23 +21,24 @@ mix ash.gen.resource Store.Seller.Seller \
   --attribute first_name:string:required:public \
   --attribute last_name:string:required:public \
   --attribute street1:string:required:public \
-  --attribute street2:string:required:public \
+  --attribute street2:string:public \
   --attribute city:string:required:public \
   --attribute state:string:required:public \
   --attribute zip:string:required:public \
   --attribute country:string:required:public \
-  --attribute notes:string:required:public \
-  --attribute x:string:required:public \
-  --attribute facebook:string:required:public \
-  --attribute instagram:string:required:public \
-  --attribute domain:string:required:public \
+  --attribute notes:string:public \
+  --attribute x:string:public \
+  --attribute facebook:string:public \
+  --attribute instagram:string:public \
+  --attribute domain:string:public \
   --attribute email:string:required:public \
-  --attribute phone:string:required:public \
+  --attribute phone:string:public \
   --attribute status:string:required:public \
   --attribute role:string:required:public \
-  --relationship has_many:store:Store.Product.Product \
+  --attribute stripe_id:string:required:public \
+  --relationship has_many:product:Store.Product.Product \
   --timestamps \
-  --extend postgres,graphql,json
+  --extend postgres,graphql,json_api
 
 mix ash.gen.domain Store.Admin
 
