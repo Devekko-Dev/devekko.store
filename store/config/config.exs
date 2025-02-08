@@ -9,7 +9,8 @@ import Config
 
 config :store,
   ecto_repos: [Store.Repo],
-  generators: [timestamp_type: :utc_datetime]
+  generators: [timestamp_type: :utc_datetime],
+  ash_domains: [Store.Stores]
 
 # Configures the endpoint
 config :store, StoreWeb.Endpoint,
@@ -61,11 +62,9 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
-
 config :ex_cldr, json_library: Jason, default_backend: Store.Cldr
 
 config :ex_cldr, default_backend: Store.Cldr
-
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
