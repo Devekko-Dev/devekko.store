@@ -18,6 +18,7 @@ defmodule StoreWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    live "/sellers", SellerLive
   end
 
   # Other scopes may use custom stacks.
