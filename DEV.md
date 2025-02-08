@@ -42,5 +42,31 @@ mix igniter.install ash_postgres
 
 mix ash.gen.domain Store.Seller
 
+mix ash.gen.resource Store.Seller.Seller \
+  --default-actions read \
+  --uuid-primary-key id \
+  --attribute slug:string:required:public \
+  --attribute first_name:string:required:public \
+  --attribute last_name:string:required:public \
+  --attribute street1:string:required:public \
+  --attribute street2:string:public \
+  --attribute city:string:required:public \
+  --attribute state:string:required:public \
+  --attribute zip:string:required:public \
+  --attribute country:string:required:public \
+  --attribute notes:string:public \
+  --attribute x:string:public \
+  --attribute facebook:string:public \
+  --attribute instagram:string:public \
+  --attribute domain:string:public \
+  --attribute email:string:required:public \
+  --attribute phone:string:public \
+  --attribute status:string:required:public \
+  --attribute role:string:required:public \
+  --attribute stripe_id:string:required:public \
+  --relationship has_many:product:Store.Product.Product \
+  --timestamps \
+  --extend postgres,graphql,json_api
+
 mix igniter.install ash_authentication
 
