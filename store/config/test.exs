@@ -1,5 +1,4 @@
 import Config
-config :ash, disable_async?: true
 
 # Configure your database
 #
@@ -18,7 +17,7 @@ config :store, Store.Repo,
 # you can enable the server option below.
 config :store, StoreWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "6Z2vT94m3t4qP6QGlyX61sph6J4wjuPRlaUScr8lrwyc4D2EX2xelXcVZs7Paaft",
+  secret_key_base: "N78dT4l6CpGqW5g3dXWPiuMA0MV4jjVs7dq/vVmcRTMSVJZczGFhhKVp6qu/X/DU",
   server: false
 
 # In test we don't send emails

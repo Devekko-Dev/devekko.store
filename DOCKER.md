@@ -2,6 +2,10 @@ docker compose up
 
 docker compose up store_pgvector_dev
 
+docker compose up store-pgvector-dev
+
+docker compose up store-ash-dev
+
 07:16:01 niccolox@devekko devekko.store → docker compose up cuda
 [+] Running 2/1
  ✔ Network devekkostore_default   Created                                                                                                                        0.1s 

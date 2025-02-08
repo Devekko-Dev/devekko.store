@@ -3,9 +3,9 @@ import Config
 # Configure your database
 config :store, Store.Repo,
   username: "admin",
-  password: "cohort9theory+Defy",
-  hostname: "store_pgvector_dev",
-  database: "store_pgvector_dev",
+  password: "cohort9theoryDefy",
+  hostname: "store-pgvector-dev",
+  database: "store-pgvector-dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10,
@@ -17,14 +17,14 @@ config :store, Store.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we can use it
 # to bundle .js and .css sources.
+# Binding to loopback ipv4 address prevents access from other machines.
 config :store, StoreWeb.Endpoint,
-  # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
-  http: [ip: {127, 0, 0, 1}, port: 4000],
+  http: [ip: {127, 0, 0, 1}, port: 4799],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "HzhOtUKuruFSjI5Gbl1PjfN68Red9VZ6YDZ9wY687hXnw3RwqwROWTv5JBpxLSwj",
+  secret_key_base: "1lhcB6aPjW/nQvnxOq94Ftyhue96LxfJoKyCEi6w2O7Q5D6Q1Mb9AMEi0xUDeL7t",
   watchers: [
     esbuild: {Esbuild, :install_and_run, [:store, ~w(--sourcemap=inline --watch)]},
     tailwind: {Tailwind, :install_and_run, [:store, ~w(--watch)]}

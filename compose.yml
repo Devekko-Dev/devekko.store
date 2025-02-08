@@ -14,7 +14,7 @@ services:
     environment:
       - DATABASE_URL=postgresql+asyncpg://postgres:postgres@postgres:5432/stack
     depends_on:
-      - postgres
+      - store-pgvector-dev
     networks:
       - data
       - internet
@@ -51,11 +51,11 @@ services:
               count: 1
               capabilities: [gpu]
 
-  store_ash_dev:
+  store-ash-dev:
     build:
       context: ./store
       dockerfile: ./gpu.Dockerfile
-    container_name: store
+    container_name: store-ash-dev
     develop:
       watch:
         - action: sync
@@ -81,36 +81,36 @@ services:
       - internet
       - data
     depends_on:
-      - store_pgvector_dev
+      - store-pgvector-dev
     ports:
       - "4799:4004"
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
-      - DATABASE_URL=ecto://admin:cohort9theory+Defy@pgvector/folkbot_prod
+      - DATABASE_URL=ecto://admin:cohort9theoryDefy@store-pgvector-dev/store-pgvector-dev
       - SECRET_KEY_BASE="HzhOtUKuruFSjI5Gbl1PjfN68Red9VZ6YDZ9wY687hXnw3RwqwROWTv5JBpxLSwj
 #    command: sleep infinity
     command:
       - /app/gpu.sh
 
-  store_pgvector_dev:
+  store-pgvector-dev:
     image: pgvector/pgvector:pg17
-    container_name: store_pgvector_dev
+    container_name: store-pgvector-dev
     ports:
      - 5799:5432
     networks:
       - data
     restart: always
     environment:
-      - POSTGRES_DB=store_pgvector_dev
+      - POSTGRES_DB=store-pgvector-dev
       - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=cohort9theory+Defy
+      - POSTGRES_PASSWORD=cohort9theoryDefy
     volumes:
       - ./pgvector-init:/docker-entrypoint-initdb.d/
-      - postgres_data:/var/lib/postgresql
+      - store-pgvector-dev-data:/var/lib/postgresql
       #- ./folkbot_prod.sql:/docker-entrypoint-initdb.d/folkbot_prod.sql
     # configs:
     #   - source: pgvector-init/folkbot_prod.sql
     #     target: /docker-entrypoint-initdb.d/init.sql
 
 volumes:
-  postgres_data:
+  store-pgvector-dev-data:

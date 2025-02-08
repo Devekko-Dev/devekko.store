@@ -7,60 +7,9 @@
 # General application configuration
 import Config
 
-config :mime,
-  extensions: %{"json" => "application/vnd.api+json"},
-  types: %{"application/vnd.api+json" => ["json"]}
-
-config :ash,
-  allow_forbidden_field_for_relationships_by_default?: true,
-  include_embedded_source_by_default?: false,
-  show_keysets_for_all_actions?: false,
-  default_page_type: :keyset,
-  policies: [no_filter_static_forbidden_reads?: false],
-  custom_types: [ticket_status: Store.Support.Ticket.Types.Status, money: AshMoney.Types.Money],
-  known_types: [AshMoney.Types.Money]
-
-config :spark,
-  formatter: [
-    remove_parens?: true,
-    "Ash.Resource": [
-      section_order: [
-        :json_api,
-        :graphql,
-        :postgres,
-        :resource,
-        :code_interface,
-        :actions,
-        :policies,
-        :pub_sub,
-        :preparations,
-        :changes,
-        :validations,
-        :multitenancy,
-        :attributes,
-        :relationships,
-        :calculations,
-        :aggregates,
-        :identities
-      ]
-    ],
-    "Ash.Domain": [
-      section_order: [
-        :json_api,
-        :graphql,
-        :resources,
-        :policies,
-        :authorization,
-        :domain,
-        :execution
-      ]
-    ]
-  ]
-
 config :store,
   ecto_repos: [Store.Repo],
-  generators: [timestamp_type: :utc_datetime],
-  ash_domains: [Store.Support]
+  generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint
 config :store, StoreWeb.Endpoint,
@@ -71,7 +20,7 @@ config :store, StoreWeb.Endpoint,
     layout: false
   ],
   pubsub_server: Store.PubSub,
-  live_view: [signing_salt: "j22/gLnc"]
+  live_view: [signing_salt: "X5Ic7jf/"]
 
 # Configures the mailer
 #
@@ -112,9 +61,11 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+
 config :ex_cldr, json_library: Jason, default_backend: Store.Cldr
 
 config :ex_cldr, default_backend: Store.Cldr
+
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

@@ -1,10 +1,5 @@
 defmodule StoreWeb.Router do
   use StoreWeb, :router
-  import AshAdmin.Router
-
-  pipeline :graphql do
-    plug AshGraphql.Plug
-  end
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -12,48 +7,17 @@ defmodule StoreWeb.Router do
     plug :fetch_live_flash
     plug :put_root_layout, html: {StoreWeb.Layouts, :root}
     plug :protect_from_forgery
-    # plug :put_secure_browser_headers
-    plug :put_secure_browser_headers, %{"content-security-policy" => "default-src 'nonce-ash_admin-Ed55GFnX' 'self'"}
+    plug :put_secure_browser_headers
   end
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/api/json" do
-    pipe_through [:api]
-
-    forward "/swaggerui",
-            OpenApiSpex.Plug.SwaggerUI,
-            path: "/api/json/open_api",
-            default_model_expand_depth: 4
-
-    forward "/", StoreWeb.AshJsonApiRouter
-  end
-
-  scope "/gql" do
-    pipe_through [:graphql]
-
-    forward "/playground",
-            Absinthe.Plug.GraphiQL,
-            schema: Module.concat(["StoreWeb.GraphqlSchema"]),
-            interface: :playground
-
-    forward "/",
-            Absinthe.Plug,
-            schema: Module.concat(["StoreWeb.GraphqlSchema"])
-  end
-
   scope "/", StoreWeb do
     pipe_through :browser
 
     get "/", PageController, :home
-  end
-
-  scope "/" do
-    pipe_through :browser
-
-    ash_admin "/admin"
   end
 
   # Other scopes may use custom stacks.
