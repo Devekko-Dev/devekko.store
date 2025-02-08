@@ -7,7 +7,7 @@ defmodule StoreWeb.SellerLive.FormComponent do
     <div>
       <.header>
         {@title}
-        <:subtitle>Use this form to manage seller records in your database.</:subtitle>
+        <:subtitle>Sellers database.</:subtitle>
       </.header>
 
       <.simple_form
@@ -18,46 +18,118 @@ defmodule StoreWeb.SellerLive.FormComponent do
         phx-submit="save"
       >
         <%= if @form.source.type == :create do %>
-          <.input field={@form[:slug]} type="text" label="Slug" /><.input
+          <.input field={@form[:slug]} type="text" label="Slug" />
+          <.input
             field={@form[:first_name]}
             type="text"
             label="First name"
-          /><.input field={@form[:last_name]} type="text" label="Last name" /><.input
+          />
+          <.input field={@form[:last_name]} type="text" label="Last name" />
+          <.input
             field={@form[:street1]}
             type="text"
             label="Street1"
-          /><.input field={@form[:street2]} type="text" label="Street2" /><.input
+          />
+          <.input field={@form[:street2]} type="text" label="Street2" />
+          <.input
             field={@form[:city]}
             type="text"
             label="City"
-          /><.input field={@form[:state]} type="text" label="State" /><.input
+          />
+          <.input field={@form[:state]} type="text" label="State" />
+          <.input
             field={@form[:zip]}
             type="text"
             label="Zip"
-          /><.input field={@form[:country]} type="text" label="Country" /><.input
+          />
+          <.input field={@form[:country]} type="text" label="Country" />
+          <.input
             field={@form[:notes]}
             type="text"
             label="Notes"
-          /><.input field={@form[:x]} type="text" label="X" /><.input
+          />
+          <.input field={@form[:x]} type="text" label="X" />
+          <.input
             field={@form[:facebook]}
             type="text"
             label="Facebook"
-          /><.input field={@form[:instagram]} type="text" label="Instagram" /><.input
+          />
+          <.input field={@form[:instagram]} type="text" label="Instagram" />
+          <.input
             field={@form[:domain]}
             type="text"
             label="Domain"
-          /><.input field={@form[:email]} type="text" label="Email" /><.input
+          />
+          <.input field={@form[:email]} type="text" label="Email" />
+          <.input
             field={@form[:phone]}
             type="text"
             label="Phone"
-          /><.input field={@form[:status]} type="text" label="Status" /><.input
+          />
+          <.input field={@form[:status]} type="text" label="Status" />
+          <.input
             field={@form[:role]}
             type="text"
             label="Role"
-          /><.input field={@form[:stripe_id]} type="text" label="Stripe" />
+          />
+          <.input field={@form[:stripe_id]} type="text" label="Stripe" />
         <% end %>
         <%= if @form.source.type == :update do %>
-          <.input field={@form[:slug]} type="text" label="Slug" />
+        <.input field={@form[:slug]} type="text" label="Slug" />
+        <.input
+          field={@form[:first_name]}
+          type="text"
+          label="First name"
+        />
+        <.input field={@form[:last_name]} type="text" label="Last name" />
+        <.input
+          field={@form[:street1]}
+          type="text"
+          label="Street1"
+        />
+        <.input field={@form[:street2]} type="text" label="Street2" />
+        <.input
+          field={@form[:city]}
+          type="text"
+          label="City"
+        />
+        <.input field={@form[:state]} type="text" label="State" />
+        <.input
+          field={@form[:zip]}
+          type="text"
+          label="Zip"
+        />
+        <.input field={@form[:country]} type="text" label="Country" />
+        <.input
+          field={@form[:notes]}
+          type="text"
+          label="Notes"
+        />
+        <.input field={@form[:x]} type="text" label="X" />
+        <.input
+          field={@form[:facebook]}
+          type="text"
+          label="Facebook"
+        />
+        <.input field={@form[:instagram]} type="text" label="Instagram" />
+        <.input
+          field={@form[:domain]}
+          type="text"
+          label="Domain"
+        />
+        <.input field={@form[:email]} type="text" label="Email" />
+        <.input
+          field={@form[:phone]}
+          type="text"
+          label="Phone"
+        />
+        <.input field={@form[:status]} type="text" label="Status" />
+        <.input
+          field={@form[:role]}
+          type="text"
+          label="Role"
+        />
+        <.input field={@form[:stripe_id]} type="text" label="Stripe" />
         <% end %>
 
         <:actions>

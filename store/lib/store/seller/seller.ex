@@ -165,7 +165,27 @@ defmodule Store.Seller.Seller do
     end
 
     update :update do
-      accept([:slug])
+      accept([
+        :slug,
+        :first_name,
+        :last_name,
+        :street1,
+        :street2,
+        :city,
+        :state,
+        :zip,
+        :country,
+        :notes,
+        :x,
+        :facebook,
+        :instagram,
+        :domain,
+        :email,
+        :phone,
+        :status,
+        :role,
+        :stripe_id
+      ])
     end
 
     read :read do
