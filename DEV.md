@@ -40,5 +40,7 @@ mix ash.gen.resource Store.Products.Product \
 
 mix igniter.install ash_postgres
 
+mix ash.gen.domain Store.Seller
+
 mix igniter.install ash_authentication
 
