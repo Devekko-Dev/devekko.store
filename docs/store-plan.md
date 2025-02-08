@@ -148,7 +148,7 @@ mix ash.gen.resource Store.Products.Product \
   --relationship belongs_to:account:Store.Accounts.Account \
   --relationship belongs_to:account:Store.Accounts.User \
   --timestamps \
-  --extend postgres,graphql,json
+  --extend postgres,graphql,json_api,AshAdmin.Resource
 
 mix ash.gen.resource Store.Catalogs.Collection \
   --default-actions read \

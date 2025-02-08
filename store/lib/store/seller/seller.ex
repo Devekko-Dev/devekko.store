@@ -6,7 +6,25 @@ defmodule Store.Seller.Seller do
     data_layer: AshPostgres.DataLayer
 
   actions do
-    defaults([:read])
+
+    # defaults [:create, :read, :update, :destroy]
+    default_accept [:slug, :first_name, :last_name, :street1, :street2, :city, :state, :zip, :country, :notes, :x, :facebook, :instagram, :domain, :email, :phone, :status, :role, :stripe_id]
+
+    create :create do
+      accept [:slug, :first_name, :last_name, :street1, :street2, :city, :state, :zip, :country, :notes, :x, :facebook, :instagram, :domain, :email, :phone, :status, :role, :stripe_id]
+    end
+
+    update :update do
+      accept [:slug]
+    end
+
+    read :read do
+      primary? true
+    end
+
+    destroy :destroy do
+    end
+
   end
 
   attributes do

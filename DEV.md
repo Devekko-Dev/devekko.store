@@ -68,6 +68,8 @@ mix ash.gen.resource Store.Seller.Seller \
   --timestamps \
   --extend postgres,graphql,json_api
 
+mix phx.gen.live Store.Seller Seller sellers slug:string first_name:string last_name:string email:string
+
 mix ash.gen.resource Store.Product.Product \
   --default-actions read \
   --uuid-primary-key id \
@@ -86,7 +88,7 @@ mix ash.gen.resource Store.Product.Product \
   --timestamps \
   --extend postgres,graphql,json_api,AshAdmin.Resource
 
-mix ash.codegen create_seller
+mix ash.codegen create_seller_product
 
 
 
