@@ -80,8 +80,16 @@ defmodule StoreWeb.SellerLive.Show do
 
   @impl true
   def mount(_params, _session, socket) do
-    {:ok, socket}
+    {:ok,
+     socket
+     |> stream(:sellers, Ash.read!(Store.Seller.Seller, actor: socket.assigns[:current_user]))
+     |> assign_new(:current_user, fn -> nil end)}
   end
+
+  # @impl true
+  # def mount(_params, _session, socket) do
+  #   {:ok, socket}
+  # end
 
   @impl true
   def handle_params(%{"id" => id}, _, socket) do
@@ -89,7 +97,7 @@ defmodule StoreWeb.SellerLive.Show do
      socket
      |> assign(:page_title, page_title(socket.assigns.live_action))
      |> assign(:seller, Ash.get!(Store.Seller.Seller, id, actor: socket.assigns.current_user))}
-  end
+    end
 
   defp page_title(:show), do: "Show Seller"
   defp page_title(:edit), do: "Edit Seller"
