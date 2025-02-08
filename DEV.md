@@ -93,6 +93,14 @@ mix ash.codegen create_seller_product
 mix ash_phoenix.gen.live --domain Store.Seller --resource Store.Seller.Seller --resourceplural sellers
 
 why so many questions? 
+too many options
+too many steps
+book doesnt have complete liveview forms
+I want to be able to see the code
+I dont want the frustration and the time of working backwards from cut off snippets, docs, examples online that dont align and trial and error
+I want a book that is cohesive and whole
 
 mix igniter.install ash_authentication
+
+
 

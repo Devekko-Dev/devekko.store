@@ -5,8 +5,17 @@ defmodule Store.Product.Product do
     extensions: [AshGraphql.Resource, AshJsonApi.Resource, AshAdmin.Resource],
     data_layer: AshPostgres.DataLayer
 
-  actions do
-    defaults([:read])
+  graphql do
+    type(:product)
+  end
+
+  json_api do
+    type("product")
+  end
+
+  postgres do
+    table "products"
+    repo Store.Repo
   end
 
   attributes do
@@ -71,16 +80,7 @@ defmodule Store.Product.Product do
     belongs_to :seller, Store.Seller.Seller
   end
 
-  json_api do
-    type("product")
-  end
-
-  graphql do
-    type(:product)
-  end
-
-  postgres do
-    table "products"
-    repo Store.Repo
+  actions do
+    defaults([:read])
   end
 end

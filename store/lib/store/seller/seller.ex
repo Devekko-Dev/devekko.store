@@ -5,26 +5,17 @@ defmodule Store.Seller.Seller do
     extensions: [AshGraphql.Resource, AshJsonApi.Resource],
     data_layer: AshPostgres.DataLayer
 
-  actions do
+  graphql do
+    type(:seller)
+  end
 
-    # defaults [:create, :read, :update, :destroy]
-    default_accept [:slug, :first_name, :last_name, :street1, :street2, :city, :state, :zip, :country, :notes, :x, :facebook, :instagram, :domain, :email, :phone, :status, :role, :stripe_id]
+  json_api do
+    type("seller")
+  end
 
-    create :create do
-      accept [:slug, :first_name, :last_name, :street1, :street2, :city, :state, :zip, :country, :notes, :x, :facebook, :instagram, :domain, :email, :phone, :status, :role, :stripe_id]
-    end
-
-    update :update do
-      accept [:slug]
-    end
-
-    read :read do
-      primary? true
-    end
-
-    destroy :destroy do
-    end
-
+  postgres do
+    table "sellers"
+    repo Store.Repo
   end
 
   attributes do
@@ -125,16 +116,63 @@ defmodule Store.Seller.Seller do
     has_many :product, Store.Product.Product
   end
 
-  json_api do
-    type("seller")
-  end
+  actions do
+    # defaults [:create, :read, :update, :destroy]
+    default_accept([
+      :slug,
+      :first_name,
+      :last_name,
+      :street1,
+      :street2,
+      :city,
+      :state,
+      :zip,
+      :country,
+      :notes,
+      :x,
+      :facebook,
+      :instagram,
+      :domain,
+      :email,
+      :phone,
+      :status,
+      :role,
+      :stripe_id
+    ])
 
-  graphql do
-    type(:seller)
-  end
+    create :create do
+      accept([
+        :slug,
+        :first_name,
+        :last_name,
+        :street1,
+        :street2,
+        :city,
+        :state,
+        :zip,
+        :country,
+        :notes,
+        :x,
+        :facebook,
+        :instagram,
+        :domain,
+        :email,
+        :phone,
+        :status,
+        :role,
+        :stripe_id
+      ])
+    end
 
-  postgres do
-    table "sellers"
-    repo Store.Repo
+    update :update do
+      accept([:slug])
+    end
+
+    read :read do
+      primary?(true)
+    end
+
+    destroy :destroy do
+    end
   end
 end

@@ -3,11 +3,11 @@ defmodule Store.Seller do
 
   resources do
     resource Store.Seller.Seller do
-      define :create_seller, action: :create
-      define :update_seller, action: :update
-      define :destroy_seller, action: :destroy
-      define :read_sellers, action: :read
-      define :get_seller_by_id, action: :read, get_by: :id
+      define(:create_seller, action: :create)
+      define(:update_seller, action: :update)
+      define(:destroy_seller, action: :destroy)
+      define(:read_sellers, action: :read)
+      define(:get_seller_by_id, action: :read, get_by: :id)
     end
   end
 end

@@ -66,7 +66,7 @@ config :store, StoreWeb.Endpoint,
   ]
 
 # Enable dev routes for dashboard and mailbox
-config :store, dev_routes: true
+config :store, dev_routes: true, token_signing_secret: "rdJrcoezLneBDQCcTb55+Ngd3Sdi4Nj1"
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
