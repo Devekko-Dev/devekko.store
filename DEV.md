@@ -92,6 +92,8 @@ mix ash.codegen create_seller_product
 
 mix ash_phoenix.gen.live --domain Store.Seller --resource Store.Seller.Seller --resourceplural sellers
 
+mix ash_phoenix.gen.live --domain Store.Seller --resource Store.Seller.Product --resourceplural products
+
 why so many questions? 
 too many options
 too many steps
